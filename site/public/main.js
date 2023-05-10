@@ -153,6 +153,19 @@ function seg() {
     }
     var url = "des1.html"
 
+    
+localStorage.setItem("manphom0", man);
+
+localStorage.setItem("manphom0", man);
+
+localStorage.setItem("artihom0", art);
+
+localStorage.setItem("cavhom0", cavalary);
+
+localStorage.setItem("cashhom0", csh);
+
+localStorage.setItem("moralhom0", moral);
+
     localStorage.setItem("manp", man);
 
     localStorage.setItem("arti", art);
