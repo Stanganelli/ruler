@@ -64,11 +64,9 @@
                     <button class="botao" onclick="cadastrar()">Cadastrar</button>
 
                 </div>
-                <div  id="div1" class="loading-div">
-                    <img id="img1" src="./assets/circle-loading.gif">
-                </div>
+                
 
-                <div id="div_erros_login"></div>
+     
             </div>
         </div>
     </div>
@@ -82,7 +80,7 @@
 
 <script>
     function cadastrar() {
-        aguardar();
+        
 
         //Recupere o valor da nova input pelo nome do id
         // Agora vá para o método fetch logo abaixo
@@ -95,12 +93,9 @@
             cardErro.style.display = "block"
             mensagem_erro.innerHTML = "(Mensagem de erro para todos os campos em branco)";
 
-            finalizarAguardar();
-            return false;
+    
         }
-        else {
-            setInterval(sumirMensagem, 5000)
-        }
+        
 
         // Enviando o valor da nova input
         fetch("/usuarios/cadastrar", {
@@ -115,35 +110,9 @@
                 emailServer: emailVar,
                 senhaServer: senhaVar
             })
-        }).then(function (resposta) {
-
-            console.log("resposta: ", resposta);
-
-            if (resposta.ok) {
-                cardErro.style.display = "block";
-
-                mensagem_erro.innerHTML = "Cadastro realizado com sucesso! Redirecionando para tela de Login...";
-
-                setTimeout(() => {
-                    window.location = "login.html";
-                }, "2000")
-
-                limparFormulario();
-                finalizarAguardar();
-            } else {
-                throw ("Houve um erro ao tentar realizar o cadastro!");
-            }
-        }).catch(function (resposta) {
-            console.log(`#ERRO: ${resposta}`);
-            finalizarAguardar();
-        });
-
-        return false;
+        })
     }
 
-    function sumirMensagem() {
-        cardErro.style.display = "none"
-    }
 
 </script>
 
