@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fim.css">
+    <script src="rulerimage.js"></script>
+</head>
+
+<body>
+    <div class="container4">
+        <div class="boxx1">
+            <div class="divmeio"> Coloque seu favoritos</div>
+            <select name="Esolha" id="cq1">
+                <option value="franc">Napoleão</option>
+                <option value="greek">Alexandre</option>
+                <option value="perisan">Ciro</option>
+                <option value="otoman">Mehmed II</option>
+                <option value="roman">Augusto</option>
+            </select>
+            <button id="botao_colocar" onclick="colocar()">Colocar na lista</button>
+            <div class="boxx11">
+                <div id="div_exibir"></div>
+            </div>
+        </div>
+        <div class="boxx2">
+            <div class="boximg">
+                <span id="img1"></span>
+            </div>
+            <audio controls>
+                <source src="../musicaSimplePlan/musica.mp3" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>
+    </div>
+
+</body>
+
+</html>
+
+
+<script>
+
+    var img = localStorage.getItem("img")
+
+    var man = Number(localStorage.getItem("manp"))
+
+    var art = Number(localStorage.getItem("arti"))
+
+    var cavalary = Number(localStorage.getItem("cav"))
+
+    var csh = Number(localStorage.getItem("cash"))
+
+    var moral = Number(localStorage.getItem("moral"))
+
+    var forcaart = Number(localStorage.getItem("forcaart"))
+
+    var forcacav = Number(localStorage.getItem("forcacav"))
+
+    var forcaman = Number(localStorage.getItem("forcaman"))
+
+    var forcabal = Number(localStorage.getItem("forcabal"))
+
+    img1.innerHTML = img
+
+    var listaruler = [];
+
+
+
+    function colocar() {
+        var ruler = cq1.value;
+        if (ruler == "franc") {
+            var ruler2 = "Napoleão Bonaparte"
+        }
+        if (ruler == "perisan") {
+            var ruler2 = "Quin"
+        }
+        if (ruler == "roman") {
+            var ruler2 = "Imperador Augusto"
+        }
+        if (ruler == "otoman") {
+            var ruler2 = "Mehemed II"
+        }
+        if (ruler == "greek") {
+            var ruler2 = "Alexandre o grande"
+        }
+
+
+
+
+
+        listaruler.push(ruler2)
+        div_exibir.innerHTML = ``;
+        for (var contador = 0; contador < listaruler.length; contador++) {
+            div_exibir.innerHTML += `${contador + 1}º${listaruler[contador]}<br/>`
+        }
+    }
+</script>

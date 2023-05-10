@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div0">
+        <center>
+            <div id="divexib"></div>
+        </center><br>
+        <button onclick="buyingm()">comprar infant</button><br>
+        <button onclick="buyingc()">comprar cavalaria</button><br>
+        <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
+        <button onclick="seg()">segui em frente</button>
+
+
+    </div>
+
+</body>
+
+</html>
+<script>
+
+
+
+
+
+    var ruler = localStorage.getItem("emperador")
+    var man = Number(localStorage.getItem("manp"))
+
+    var art = Number(localStorage.getItem("arti"))
+
+    var cavalary = Number(localStorage.getItem("cav"))
+
+    var csh = Number(localStorage.getItem("cash"))
+
+    var moral = Number(localStorage.getItem("moral"))
+
+    var forcaart = Number(localStorage.getItem("forcaart"))
+
+    var forcacav = Number(localStorage.getItem("forcacav"))
+
+    var forcaman = Number(localStorage.getItem("forcaman"))
+
+    var forcabal = Number(localStorage.getItem("forcabal"))
+
+
+    if (ruler == "roman") {
+        moneytim = "denarius"
+
+    }
+    if (ruler == "greek") {
+        moneytim = "drachmas"
+    }
+    if (ruler == "franc") {
+
+        moneytim = "centimes"
+    }
+    if (ruler == "otoman") {
+        moneytim = "liras"
+
+    }
+    if (ruler == "perisan") {
+        moneytim = "dìngs"
+    }
+
+    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+
+    function buyingm() {
+        if (csh > 100) {
+            man = man += 100
+            csh = csh -= 100
+
+
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
+    }
+
+    function buyingc() {
+        if (csh > 250) {
+            cavalary = cavalary += 100
+            csh = csh -= 250
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
+    }
+
+    function buyinga() {
+        if (csh > 500) {
+            art = art += 100
+            csh = csh -= 500
+
+
+
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+
+        else alert(`${moneytim} insuficente`)
+    }
+
+
+
+    if (ruler == "roman") {
+        moneytim = "denarius"
+
+        spanart.innerHTML = "linha de arqueiros"
+    }
+    if (ruler == "greek") {
+        moneytim = "drachmas"
+        spanart.innerHTML = "linha de arqueiros"
+    }
+    if (ruler == "franc") {
+
+        spanart.innerHTML = "canhão"
+        moneytim = "centimes"
+
+        spanart.innerHTML = "armadas de canhões"
+    }
+    if (ruler == "otoman") {
+        moneytim = "liras"
+
+        spanart.innerHTML = "armadas de canhões"
+    }
+    if (ruler == "perisan") {
+        moneytim = "dìngs"
+
+        spanart.innerHTML = "linha de arqueiros"
+    }
+
+    function seg() {
+        var forcav = Number(cavalary * 0.025)
+        var forman = Number(man * 0.01)
+        var forart = Number(art * 0.5)
+
+
+        if (forart > forman && forart > forcav) {
+            var forcatotala = Number(forart + forman + forcav)
+            if (moral > 50) {
+                forcatotala = forcatotala / 2
+            }
+
+        }
+        if (forman > forart && forman > forcav) {
+            var forcatotalm = Number(forart + forman + forcav)
+            if (moral > 90) {
+                forcatotalm = forcatotalm / 1.5
+            }
+        }
+        if (forcav > forart && forcav > forman) {
+            var forcatotalc = forart + forman + forcav
+            if (moral > 75) {
+                forcatotalc = forcatotalc / 2
+            }
+        }
+        if (forman == forart && forman == forcav && forart == forcav) {
+            var forcatotalb = Number(forart + forman + forcav)
+            if (moral > 25) {
+                forcatotalb = forcatotalb / 2
+            }
+        }
+        var url = "des3.html"
+
+
+        localStorage.setItem("manp", man);
+
+        localStorage.setItem("arti", art);
+
+        localStorage.setItem("cav", cavalary);
+
+        localStorage.setItem("cash", csh);
+
+        localStorage.setItem("moral", moral);
+
+        localStorage.setItem("forcaart", forcaart)
+
+        localStorage.setItem("forcacav", forcacav)
+
+        localStorage.setItem("forcaman", forcaman)
+
+        localStorage.setItem("forcabal", forcabal)
+
+        window.location(url)
+
+
+    }
+
+</script>

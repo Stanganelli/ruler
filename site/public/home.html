@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="main.js "></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+   <div id="div0">
+    <center>
+        <div id="divexib"></div>
+    </center><br>
+    <button onclick="buyingm()">comprar infant</button><br>
+    <button onclick="buyingc()">comprar cavalaria</button><br>
+    <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
+    <button onclick="seg()">segui em frente</button>
+
+
+</div>
+
+</body>
+
+</html>
+<script>
+    function buyingm() {
+    if (csh > 100) {
+        man = man += 100
+        csh = csh -= 100
+
+
+        if (ruler == "roman") {
+            moneytim = "denarius"
+
+        }
+        if (ruler == "greek") {
+            moneytim = "drachmas"
+        }
+        if (ruler == "franc") {
+
+            moneytim = "centimes"
+        }
+        if (ruler == "otoman") {
+            moneytim = "liras"
+
+        }
+        if (ruler == "perisan") {
+            moneytim = "dìngs"
+
+        }
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+    }
+    else alert(`${moneytim} insuficente`)
+}
+
+function buyingc() {
+    if (csh > 250) {
+        cavalary = cavalary += 100
+        csh = csh -= 250
+
+
+        if (ruler == "roman") {
+            moneytim = "denarius"
+        }
+        if (ruler == "greek") {
+            moneytim = "drachmas"
+        }
+        if (ruler == "franc") {
+
+            moneytim = "centimes"
+        }
+        if (ruler == "otoman") {
+            moneytim = "liras"
+
+        }
+        if (ruler == "perisan") {
+            moneytim = "dìngs"
+
+        }
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+    }
+    else alert(`${moneytim} insuficente`)
+}
+
+function buyinga() {
+    if (csh > 500) {
+        art = art += 100
+        csh = csh -= 500
+
+
+        if (ruler == "roman") {
+            moneytim = "denarius"
+
+        }
+        if (ruler == "greek") {
+            moneytim = "drachmas"
+        }
+        if (ruler == "franc") {
+
+            moneytim = "centimes"
+        }
+        if (ruler == "otoman") {
+            moneytim = "liras"
+
+        }
+        if (ruler == "perisan") {
+            moneytim = "dìngs"
+
+        }
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+    }
+
+    else alert(`${moneytim} insuficente`)}
+
+
+
+    if (ruler == "roman") {
+            moneytim = "denarius"
+
+            spanart.innerHTML = "linha de arqueiros"
+        }
+        if (ruler == "greek") {
+            moneytim = "drachmas"
+            spanart.innerHTML = "linha de arqueiros"
+        }
+        if (ruler == "franc") {
+
+            spanart.innerHTML = "canhão"
+            moneytim = "centimes"
+            
+            spanart.innerHTML = "armadas de canhões"
+        }
+        if (ruler == "otoman") {
+            moneytim = "liras"
+
+            spanart.innerHTML = "armadas de canhões"
+        }
+        if (ruler == "perisan") {
+            moneytim = "dìngs"
+            
+            spanart.innerHTML = "linha de arqueiros"
+            }
+            
+</script>

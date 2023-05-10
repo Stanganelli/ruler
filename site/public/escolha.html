@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <center>
+        <select name="Esolha" id="cq1">
+            <option value="franc">Napoleão</option>
+            <option value="greek">Alexandre</option>
+            <option value="perisan">Quin</option>
+            <option value="otoman">Mehmed II</option>
+            <option value="roman">Augusto</option>
+        </select>
+    </center>
+    <br>
+    <button onclick="aescol()">escolher</button><br>
+    <a href="home.html">seguir</a>
+</body>
+
+</html>
+<script>
+
+    function aescol() {
+        var escola = cq1.value;
+        localStorage.setItem("emperador", escola);
+    }
+</script>
