@@ -164,7 +164,7 @@ localStorage.setItem("cavhom0", cavalary);
 
 localStorage.setItem("cashhom0", csh);
 
-localStorage.setItem("moralhom0", moral);
+localStorage.setItem("moralhom0", morale);
 
     localStorage.setItem("manp", man);
 
@@ -183,9 +183,6 @@ localStorage.setItem("moralhom0", moral);
     localStorage.setItem("forcaman", forcatotalm)
 
     localStorage.setItem("forcabal", forcatotalb)
-
-    window.location(url)
-
 
     }
 
