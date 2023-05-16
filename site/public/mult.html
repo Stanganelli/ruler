@@ -23,4 +23,69 @@ var man = 0
 var cavalary = 0
 var art = 0
 var moneytim = ""
+
+function buyingm() {
+        if (csh > 100) {
+            man = man += 100
+            csh = csh -= 100
+
+
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
+    }
+
+    function buyingc() {
+        if (csh > 250) {
+            cavalary = cavalary += 100
+            csh = csh -= 250
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
+    }
+
+    function buyinga() {
+        if (csh > 500) {
+            art = art += 100
+            csh = csh -= 500
+
+
+
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+
+        else alert(`${moneytim} insuficente`)
+    }
+
+
+
+    if (ruler == "roman") {
+        moneytim = "denarius"
+
+        spanart.innerHTML = "linha de arqueiros"
+    }
+    if (ruler == "greek") {
+        moneytim = "drachmas"
+        spanart.innerHTML = "linha de arqueiros"
+    }
+    if (ruler == "franc") {
+
+        spanart.innerHTML = "canhão"
+        moneytim = "centimes"
+
+        spanart.innerHTML = "armadas de canhões"
+    }
+    if (ruler == "otoman") {
+        moneytim = "liras"
+
+        spanart.innerHTML = "armadas de canhões"
+    }
+    if (ruler == "perisan") {
+        moneytim = "dìngs"
+
+        spanart.innerHTML = "linha de arqueiros"
+    }
+
+
+
 </script>
