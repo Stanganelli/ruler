@@ -1,55 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <script src="rulerimage.js"></script>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=3.3">
-    <title>Document</title>
-</head>
-
-<body>
-
-
-</body>
-
-</html>
-
 <script>
+     if(artdes1 > 0){
+        const ctx = document.getElementById('myChart2');
+    new Chart(ctx, {
+        type: 'line',
+        data: {
+            labels: ['home',
+                'desafio 1',
+                'home 1',
+                'desafio 2',
+                'home 2',
+                'desafio 3',
+                'final',
+            ],
+            datasets: [{
+                    label: 'Homens',
+                    data: [arthom0, artdes1, arthom1, artdes2, arthom2, artdes3, arthom3m3],
+                    borderWidth: 1
+                },
+            ]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true
+                }
+            }
+        }
+    });
 
-
-
-    localStorage.setItem("manpdes3", man);
-
-    localStorage.setItem("manpdes3", man);
-
-    localStorage.setItem("artides3", art);
-
-    localStorage.setItem("cavdes3", cavalary);
-
-    localStorage.setItem("cashdes3", csh);
-
-    localStorage.setItem("moraldes3", moral);f
-
-
-    var mandes3 = Number(localStorage.getItem("manpdes3"))
-
-    var artdes3 = Number(localStorage.getItem("artides3"))
-
-    var cavalarydes3 = Number(localStorage.getItem("cavdes3"))
-
-    var cshdes3 = Number(localStorage.getItem("cashdes3"))
-
-    var moraldes3 = Number(localStorage.getItem("moraldes3"))
-
-
-
-
-
-
-    var img = localStorage.getItem("img")
-
-    img3.innerHTML = img
-
+    }
 </script>
