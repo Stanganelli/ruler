@@ -6,29 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/main.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/fim.css">
     <title>Document</title>
 </head>
 
 <body>
 
-   <div id="div0">
-    <center>
-        <div id="divexib"></div>
-    </center><br>
+    <nav class="logob">
+        <img src="media/logob.png " id="logoa">
+        <span class="nav-lista">
+            <ul>
+                <li class="hoover"><a href="index.html">HOME</a></li>
+                <li class="hoover"><a href="login.html">loguin</a></li>
+                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
+
+            </ul>
+        </span>
+    </nav>
+    
+    <div class="conteiner">
+        <span class="game">
+            <div id="divexib"></div>
+            <div class="txt">
+                
     <button onclick="buyingm()">comprar infant</button><br>
     <button onclick="buyingc()">comprar cavalaria</button><br>
     <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
     <button onclick="seg()">setar</button>
    <a href="des1.html"> <button >seguir</button></a>
+            </div>
+        </span>
+
+        <div class="boxx2">
+            <div class="boximg">
+                <span id="img1"></span>
+            </div>
+            <audio id="som1" controls>
+                <source src="" type="audio/mpeg">
+            </audio>
+        </div>
+        <br>
+        <div id="div1"></div>
+    </div>
+
+
+
     
 
-
-</div>
 
 </body>
 
 </html>
 <script>
+    
+    var img = localStorage.getItem("img")
+    var som = localStorage.getItem("som")
+
+    img1.innerHTML = img
+    som1.innerHTML = som
+
     function buyingm() {
     if (csh > 100) {
         man = man += 100

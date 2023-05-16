@@ -10,23 +10,53 @@
 
 <body>
 
-    <div id="div0">
-        <center>
+    <nav class="logob">
+        <img src="media/logob.png " id="logoa">
+        <span class="nav-lista">
+            <ul>
+                <li class="hoover"><a href="index.html">HOME</a></li>
+                <li class="hoover"><a href="login.html">loguin</a></li>
+                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
+
+            </ul>
+        </span>
+    </nav><div class="conteiner">
+        <span class="game">
             <div id="divexib"></div>
-        </center><br>
-        <button onclick="buyingm()">comprar infant</button><br>
-        <button onclick="buyingc()">comprar cavalaria</button><br>
-        <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
-        <button onclick="seg()">segui em frente</button>
+            <div class="txt">
+                
+    <button onclick="buyingm()">comprar infant</button><br>
+    <button onclick="buyingc()">comprar cavalaria</button><br>
+    <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
+    <button onclick="seg()">setar</button>
+   <a href="des1.html"> <button >seguir</button></a>
+            </div>
+        </span>
 
-
+        <div class="boxx2">
+            <div class="boximg">
+                <span id="img1"></span>
+            </div>
+            <audio id="som1" controls>
+                <source src="" type="audio/mpeg">
+            </audio>
+        </div>
+        <br>
+        <div id="div1"></div>
     </div>
+
 
 </body>
 
 </html>
 <script>
+    
 
+var img = localStorage.getItem("img")
+    var som = localStorage.getItem("som")
+
+    img1.innerHTML = img
+    som1.innerHTML = som
 
 
 
