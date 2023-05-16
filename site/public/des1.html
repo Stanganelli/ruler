@@ -25,22 +25,21 @@
         </span>
     </nav>
     <div class="conteiner">
-        <div class="game">
-            <center>
-                <div id="divexib"></div>
-
-                Você encontra o primeiro acampamnento placeholder qual será sua ação?
+        <span class="game">
+            <div id="divexib"></div>
+            <div class="txt"> Você encontra o primeiro acampamnento placeholder qual será sua ação?
+                
                 <button onclick="calc1()">ENGAGE</button>
                 <button>esperar</button>
-            </center>
-        </div>
+            </div>
+        </span>
 
         <div class="boxx2">
             <div class="boximg">
                 <span id="img1"></span>
             </div>
             <audio id="som1" controls>
-                <source src="../musicaSimplePlan/musica.mp3" type="audio/mpeg">
+                <source src="" type="audio/mpeg">
             </audio>
         </div>
         <br>
@@ -109,7 +108,7 @@
         moneytim = "dìngs"
 
     }
-    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas<br>`
 
 
     img1.innerHTML = img

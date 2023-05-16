@@ -8,6 +8,18 @@ body{
     justify-content: space-around;
     align-items: center;  
 }
+.txt {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conteiner{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: left;
+}
 
 #logoa{
     width: 90px;
@@ -49,4 +61,18 @@ transition: transform .5s;
 .hoover:hover::after {
     transform-origin: left;
     transform: scale(1);
+}
+
+.game {
+    margin-left: 93px;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    align-content: space-between;
+    width: 500px;
+    height: 500px;
+    justify-content: space-between;
+
+
 }
