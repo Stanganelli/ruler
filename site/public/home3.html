@@ -29,11 +29,7 @@
         <div id="divexib"></div>
         <div class="txt">
             
-<button onclick="buyingm()">comprar infant</button><br>
-<button onclick="buyingc()">comprar cavalaria</button><br>
-<button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
 <button onclick="seg()">setar</button>
-<a href="des1.html"> <button >seguir</button></a>
         </div>
     </span>
 
@@ -167,7 +163,6 @@ var img = localStorage.getItem("img")
                 forcatotalb = forcatotalb / 2
             }
         }
-        var url = "fim.html"
 
         
 localStorage.setItem("manphom3", man);
@@ -200,7 +195,7 @@ localStorage.setItem("moralhom3", moral);
 
         localStorage.setItem("forcabal", forcabal)
 
-        window.location(url)
+        window.location = "fim.html"
 
 
     }
