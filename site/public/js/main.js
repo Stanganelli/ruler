@@ -183,6 +183,8 @@ localStorage.setItem("moralhom0", morale);
     localStorage.setItem("forcaman", forcatotalm)
 
     localStorage.setItem("forcabal", forcatotalb)
+    
+    window.location(url)
 
     }
 
