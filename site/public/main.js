@@ -151,7 +151,6 @@ function seg() {
             forcatotalb = forcatotalb / 2
         }
     }
-    var url = "des1.html"
 
     
 localStorage.setItem("manphom0", man);
@@ -184,7 +183,7 @@ localStorage.setItem("moralhom0", morale);
 
     localStorage.setItem("forcabal", forcatotalb)
     
-    window.location(url)
+    window.location = "des1.html"
 
     }
 

@@ -2923,6 +2923,5 @@ function final() {
 
 
 function perdeu() {
-    var url = "home.html"
-    window.location(url)
+    window.location = "home.html"
 }
