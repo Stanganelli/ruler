@@ -8,11 +8,11 @@
     <script src="js/idk.js"></script>
     <script src="js/rulerimage.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fim.css">
     <title>Document</title>
 </head>
 
 <body>
+
     <nav class="logob">
         <img src="media/logob.png " id="logoa">
         <span class="nav-lista">
@@ -25,36 +25,39 @@
         </span>
     </nav>
     <div class="conteiner">
-        <span class="game">
-            <div id="divexib"></div>
-            <div class="txt"> Você encontra o primeiro acampamnento placeholder qual será sua ação?
+        <div class="game">
+        <img class="imgbc" src="media/war table.jpg" alt="">
+
+            <div class="exib" id="divexib"></div>
+            <div class="txt">
+                Você encontra o primeiro acampamnento placeholder qual será sua ação?
                 
                 <button onclick="calc2()">ENGAGE</button>
                 <button>esperar</button>
+                <div id="div1"></div>
             </div>
-        </span>
+        </div>
 
-        <div class="boxx2">
-            <div class="boximg">
-                <span id="img1"></span>
-            </div>
+        <div class="boximg">
+            <span id="img1"></span>
             <audio id="som1" controls>
                 <source src="" type="audio/mpeg">
             </audio>
         </div>
-        <br>
-        <div id="div1"></div>
     </div>
 
-
-
 </body>
-
 </html>
 
 <script>
 
+    
 
+var img = localStorage.getItem("img")
+    var som = localStorage.getItem("som")
+    
+    img1.innerHTML = img
+    som1.innerHTML = som
 
     var ruler = localStorage.getItem("emperador")
     var man = Number(localStorage.getItem("manp"))
