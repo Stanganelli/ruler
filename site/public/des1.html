@@ -4,7 +4,6 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <link rel="stylesheet" href="css/fim.css">
     <link rel="stylesheet" href="css/style.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/idk.js"></script>
@@ -12,7 +11,9 @@
     <title>Document</title>
 </head>
 
+
 <body>
+
     <nav class="logob">
         <img src="media/logob.png " id="logoa">
         <span class="nav-lista">
@@ -25,29 +26,26 @@
         </span>
     </nav>
     <div class="conteiner">
-        <span class="game">
-            <div id="divexib"></div>
-            <div class="txt"> Você encontra o primeiro acampamnento placeholder qual será sua ação?
-                
-                <button onclick="calc1()">ENGAGE</button>
-                <button>esperar</button>
-            </div>
-        </span>
+        <div class="game">
+        <img class="imgbc" src="media/war table.jpg" alt="">
 
-        <div class="boxx2">
-            <div class="boximg">
-                <span id="img1"></span>
+            <div class="exib" id="divexib"></div>
+            <div class="txt">
+                Você encontra o primeiro acampamnento placeholder qual será sua ação?
+                
+                <button onclick="calc2()">ENGAGE</button>
+                <button>esperar</button>
+                <div id="div1"></div>
             </div>
+        </div>
+
+        <div class="boximg">
+            <span id="img1"></span>
             <audio id="som1" controls>
                 <source src="" type="audio/mpeg">
             </audio>
         </div>
-        <br>
-        <div id="div1"></div>
     </div>
-
-
-
 
 </body>
 
@@ -157,7 +155,7 @@
         localStorage.setItem("forcabal", forcabal)
 
 
-        window.location(url)
+        window.location = "home2.html"
     }
 
 

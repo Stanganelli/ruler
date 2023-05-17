@@ -12,13 +12,18 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    color: white;
+    font-size: 20px;
 }
 
 .conteiner{
     display: flex;
     align-items: center;
     flex-direction: row-reverse;
-    justify-content: left;
+    justify-content: center;
+    width: 90vw;
+    height: 85vh;
+    
 }
 
 #logoa{
@@ -73,6 +78,34 @@ transition: transform .5s;
     width: 500px;
     height: 500px;
     justify-content: space-between;
+    border-radius: 10%;
+    background-image: url(war\ table.jpg);
+    flex-basis: 80%;
+}
+.exib{
+    color: white;
+    font-size: 50px;
+    text-align: center;
+    
+}
 
+/*  */
+.boximg{
+    flex-basis: 20%;
+    height: 85vh;
+    width: 25vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-left: 5px;
 
+}
+.boximg img {
+    width: 300px;
+    height: 300px;
+    border-radius: 100%;
+    margin-top: 20px;
+    margin-bottom: 200px;
+    border: gold solid 5px;
 }
