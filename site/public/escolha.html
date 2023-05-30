@@ -43,7 +43,50 @@
 <script>
 
     function aescol() {
-        var escola = cq1.value;
-        localStorage.setItem("emperador", escola);
-    }
+        var lider = cq1.value;
+        localStorage.setItem("emperador", lider);
+
+        alert (`VOCÊ ESCOLHEU A ${lider}}`)
+
+var idUsuario = sessionStorage.ID_USUARIO
+
+
+if (idUsuario != '' && idUsuario != undefined) {
+    fetch(`/usuarios/enviarRuler/${idUsuario}`, {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            // crie um atributo que recebe o valor recuperado aqui
+            // Agora vá para o arquivo routes/usuario.js
+            liderServer: lider
+        })
+    }).then(function (resposta) {
+
+        console.log("resposta: ", resposta);
+
+        if (resposta.ok) {
+            cardErro.style.display = "block";
+
+            mensagem_erro.innerHTML = "";
+
+            limparFormulario();
+            finalizarAguardar();
+        } else {
+            throw ("Houve um erro ao tentar realizar o cadastro!");
+        }
+    }).catch(function (resposta) {
+        console.log(`#ERRO: ${resposta}`);
+        // finalizarAguardar();
+    });
+} else {
+    alert("Erro! Sem ID")
+}
+
+return false;
+}
+
+
+    
 </script>
