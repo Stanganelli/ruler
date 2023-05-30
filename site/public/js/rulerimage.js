@@ -1,4 +1,7 @@
 var ruler = localStorage.getItem("emperador")
+
+
+
 var man = Number(localStorage.getItem("manp"))
 
 var art = Number(localStorage.getItem("arti"))
@@ -42,10 +45,7 @@ if (ruler == "perisan") {
     moneytim = "dìngs"
     var img = `<img src="media/qin.jpg" alt="">`
     var som = `<audio src="media/china.mp3" autoplay loop></audio>`
-}
-
-
-
+}   
 localStorage.setItem("img", img);
 localStorage.setItem("som", som );
 

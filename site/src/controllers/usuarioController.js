@@ -94,9 +94,44 @@ function cadastrar(req, res) {
     }
 }
 
+
+
+function enviarRuler(req, res) {
+    var idUsuario = req.params.idUsuario;
+
+    console.log("idUsuario", idUsuario);
+
+    // Crie uma variável que vá recuperar os valores do arquivo cadastro.html
+    var lider = req.body.liderServer;
+
+    // Faça as validações dos valores
+    if (lider == undefined) {
+        res.status(400).send("Não foi possivel inserir o lider");
+    } else {
+        
+        // Passe os valores como parâmetro e vá para o arquivo usuarioModel.js
+        usuarioModel.enviarRuler(lider, idUsuario)
+            .then(
+                function (resultado) {
+                    res.json(resultado);
+                }
+            ).catch(
+                function (erro) {
+                    console.log(erro);
+                    console.log(
+                        `\nNão foi possivel inserir o ${lider}! Erro: `,
+                        erro.sqlMessage
+                    );
+                    res.status(500).json(erro.sqlMessage);
+                }
+            );
+    }
+}
+
 module.exports = {
     entrar,
     cadastrar,
+    enviarRuler,
     listar,
     testar
 }

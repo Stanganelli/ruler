@@ -31,8 +31,23 @@ function cadastrar(nome, email, senha) {
     return database.executar(instrucao);
 }
 
+
+
+function enviarRuler(lider, idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", lider);
+
+
+    var instrucao = `
+    INSERT INTO lider (nome, fkUsuario) VALUES ("${lider}", ${idUsuario});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
+    enviarRuler,
     listar,
 };

@@ -16,6 +16,12 @@ router.post("/cadastrar", function (req, res) {
     usuarioController.cadastrar(req, res);
 })
 
+
+router.post("/enviarRuler/:idUsuario", function (req, res) {
+    usuarioController.enviarRuler(req, res);
+});
+
+
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);
 });
