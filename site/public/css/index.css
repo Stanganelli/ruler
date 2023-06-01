@@ -111,3 +111,34 @@ header a:hover {
 .join-us input[type="submit"] {
   transition: all 0.3s;
 }
+h2 {
+  font-family: Arial, sans-serif;
+  font-size: 24px;
+  color: #663333;
+  text-align: center;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: inline-block;
+  margin: 10px;
+}
+
+a {
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  color: #ffffff;
+  background-color: #cc3333;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+a:hover {
+  background-color: #ff6666;
+}
