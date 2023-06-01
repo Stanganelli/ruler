@@ -38,7 +38,7 @@ function enviarRuler(lider, idUsuario) {
 
 
     var instrucao = `
-    INSERT INTO lider (nome, fkUsuario) VALUES ("${lider}", ${idUsuario});
+    update  usuario set fkemperador = ${lider} where idUsuario = ${idUsuario};
     `;
     console.log("Executando a instrução SQL: \n" + instrucao);
     return database.executar(instrucao);
