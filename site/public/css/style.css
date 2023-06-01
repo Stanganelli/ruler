@@ -109,3 +109,68 @@ transition: transform .5s;
     margin-bottom: 200px;
     border: gold solid 5px;
 }
+/* Style the nav element */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Style the nav links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add a hover effect to the nav links */
+nav a:hover {
+    color: #ddd;
+}
+/* Style the buttons */
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+/* Add a hover effect to the buttons */
+button:hover {
+    background-color: #3e8e41;
+}
+
+/* Add a focus effect to the buttons */
+button:focus {
+    outline: none;
+}
+
+/* Add a transition effect to the buttons */
+button {
+    transition: all 0.3s;
+}
+
+/* Add an active effect to the buttons */
+button:active {
+    transform: translateY(4px);
+}
+

@@ -78,4 +78,36 @@ body {
       text-align:center; 
       padding-top:20px; 
   }
-  
+  /* Add a hover effect to the header links */
+header a:hover {
+  color: #ddd;
+}
+
+/* Add a hover effect to the featured leaders images */
+.featured-leaders img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* Add a hover effect to the latest news images */
+.latest-news img:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s;
+}
+
+/* Add a focus effect to the email input field */
+.join-us input[type="email"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
+
+/* Add a hover effect to the submit button */
+.join-us input[type="submit"]:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+/* Add a transition effect to the submit button */
+.join-us input[type="submit"] {
+  transition: all 0.3s;
+}

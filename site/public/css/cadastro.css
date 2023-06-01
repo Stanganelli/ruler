@@ -40,6 +40,17 @@
     flex-direction: column;
     margin-bottom: 10px;
 }
+/* Add a hover effect to the button */
+.botao:hover {
+    background-color: #3e8e41;
+    cursor: pointer;
+}
+
+/* Add a focus effect to the input fields */
+.campo input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+}
 
 .campo span {
     font-size: 14px;
@@ -62,4 +73,35 @@
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
+}
+/* Style the nav element */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+/* Style the nav links */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav li {
+    margin: 0 10px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Add a hover effect to the nav links */
+nav a:hover {
+    color: #ddd;
 }
