@@ -11,7 +11,7 @@ var ruler = localStorage.getItem("emperador");
 var moneytim = ""
 
 function buyingm() {
-    if (csh > 100) {
+    if (csh >= 100) {
         man = man += 100
         csh = csh -= 100
 
@@ -46,7 +46,7 @@ function buyingm() {
 }
 
 function buyingc() {
-    if (csh > 250) {
+    if (csh >= 250) {
         cavalary = cavalary += 100
         csh = csh -= 250
 
@@ -86,7 +86,7 @@ function voltaahome(){
 }
 
 function buyinga() {
-    if (csh > 500) {
+    if (csh >= 500) {
         art = art += 100
         csh = csh -= 500
 
