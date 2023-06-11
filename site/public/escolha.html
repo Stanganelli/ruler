@@ -13,15 +13,15 @@
 
 <body>
 
-    
+
     <nav class="logob">
         <img src="media/logob.png " id="logoa">
         <span class="nav-lista">
             <ul>
                 <li class="hoover"><a href="index.html">HOME</a></li>
-                <li class="hoover"><a href="login.html">loguin</a></li>
+                <li class="hoover"><a href="login.html">login</a></li>
                 <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-
+                <li class="hoover"><a href="chart.html">graficos</a></li>
             </ul>
         </span>
     </nav>
@@ -44,49 +44,64 @@
 
     function aescol() {
         var lider = cq1.value;
-        localStorage.setItem("emperador", lider);
-
-        alert (`VOCÊ ESCOLHEU A ${lider}}`)
-
-var idUsuario = sessionStorage.ID_USUARIO
-
-
-if (idUsuario != '' && idUsuario != undefined) {
-    fetch(`/usuarios/enviarRuler/${idUsuario}`, {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/json"
-        },
-        body: JSON.stringify({
-            // crie um atributo que recebe o valor recuperado aqui
-            // Agora vá para o arquivo routes/usuario.js
-            liderServer: lider
-        })
-    }).then(function (resposta) {
-
-        console.log("resposta: ", resposta);
-
-        if (resposta.ok) {
-            cardErro.style.display = "block";
-
-            mensagem_erro.innerHTML = "";
-
-            limparFormulario();
-            finalizarAguardar();
-        } else {
-            throw ("Houve um erro ao tentar realizar o cadastro!");
+        if (lider == '1') {
+            var lider1 = "franc"
         }
-    }).catch(function (resposta) {
-        console.log(`#ERRO: ${resposta}`);
-        // finalizarAguardar();
-    });
-} else {
-    alert("Erro! Sem ID")
-}
+        if (lider == '2') {
+            var lider1 = "greek"
+        }
+        if (lider == '3') {
+            var lider1 = "perisan"
+        }
+        if (lider == '4') {
+            var lider1 = "otoman"
+        }
+        if (lider == '5') {
+            var lider1 = "roman"
+        }
+        localStorage.setItem("emperador", lider1);
 
-return false;
-}
+        alert(`VOCÊ ESCOLHEU A ${lider}}`)
+
+        var idUsuario = sessionStorage.ID_USUARIO
 
 
-    
+        if (idUsuario != '' && idUsuario != undefined) {        
+            fetch(`/usuarios/enviarRuler/${idUsuario}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    liderServer: lider
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    mensagem_erro.innerHTML = "";
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+        } else {
+            alert("Erro! Sem ID")
+        }
+
+        return false;
+    }
+
+
+
 </script>

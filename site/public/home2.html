@@ -17,9 +17,9 @@
         <span class="nav-lista">
             <ul>
                 <li class="hoover"><a href="index.html">HOME</a></li>
-                <li class="hoover"><a href="login.html">loguin</a></li>
+                <li class="hoover"><a href="login.html">login</a></li>
                 <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-
+                <li class="hoover"><a href="chart.html">graficos</a></li>
             </ul>
         </span>
     </nav><div class="conteiner">
@@ -104,7 +104,7 @@ var img = localStorage.getItem("img")
 
 
     function buyingm() {
-        if (csh > 100) {
+        if (csh >= 100) {
             man = man += 100
             csh = csh -= 100
 
@@ -115,7 +115,7 @@ var img = localStorage.getItem("img")
     }
 
     function buyingc() {
-        if (csh > 250) {
+        if (csh >= 250) {
             cavalary = cavalary += 100
             csh = csh -= 250
             divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
@@ -124,7 +124,7 @@ var img = localStorage.getItem("img")
     }
 
     function buyinga() {
-        if (csh > 500) {
+        if (csh >= 500) {
             art = art += 100
             csh = csh -= 500
 
