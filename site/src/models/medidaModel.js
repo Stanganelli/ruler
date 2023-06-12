@@ -7,6 +7,17 @@ function buscarUltimasMedidas() {
     return database.executar(instrucaoSql);
 }
 
+
+function buscarUltimasMedidasa() {
+    instrucaoSql = `select lider.nome, count(fkEmperador) as 'qtd_pessoas' from usuario join lider on fkEmperador = idLider group by fkEmperador;`;
+
+console.log("Executando a instrução SQL: \n" + instrucaoSql);
+return database.executar(instrucaoSql);
+}
+
+
+
+
 function buscarMedidasEmTempoReal(idAquario) {
 
     instrucaoSql = ''
@@ -40,5 +51,6 @@ function buscarMedidasEmTempoReal(idAquario) {
 
 module.exports = {
     buscarUltimasMedidas,
-    buscarMedidasEmTempoReal
+    buscarMedidasEmTempoReal,
+    buscarUltimasMedidasa,
 }

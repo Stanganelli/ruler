@@ -45,9 +45,23 @@ function enviarRuler(lider, idUsuario) {
 }
 
 
+function enviarResul(resul, idUsuario) {
+    console.log("ACESSEI O USUARIO MODEL \n \n\t\t >> Se aqui der erro de 'Error: connect ECONNREFUSED',\n \t\t >> verifique suas credenciais de acesso ao banco\n \t\t >> e se o servidor de seu BD está rodando corretamente. \n\n function cadastrar():", resul);
+
+
+    var instrucao = `
+    insert into resul (resul, fkUsuario) values
+    ('${resul}', ${idUsuario});
+    `;
+    console.log("Executando a instrução SQL: \n" + instrucao);
+    return database.executar(instrucao);
+}
+
+
 module.exports = {
     entrar,
     cadastrar,
     enviarRuler,
     listar,
+    enviarResul
 };

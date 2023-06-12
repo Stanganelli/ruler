@@ -13,7 +13,10 @@
     <link rel="stylesheet" href="css/fim1.css">
 </head>
 
-<body> <nav class="logob">
+<body > 
+
+    
+    <nav class="logob">
     <img src="media/logob.png " id="logoa">
     <span class="nav-lista">
         <ul>
@@ -27,6 +30,7 @@
 
 
     siga para os graficos campeão <a href="graf.html"><button>SIGA</button></a>
+    <button onclick="bd()">ENVIAR</button>
 <br>
 <br>
 <br>
@@ -88,27 +92,93 @@
 
 <script>
 
-    var img = localStorage.getItem("img")
 
-    var man = Number(localStorage.getItem("manp"))
+var idUsuario = sessionStorage.ID_USUARIO
 
-    var art = Number(localStorage.getItem("arti"))
+var man = Number(localStorage.getItem("manp"))
 
-    var cavalary = Number(localStorage.getItem("cav"))
+var art = Number(localStorage.getItem("arti"))
 
-    var csh = Number(localStorage.getItem("cash"))
+var cavalary = Number(localStorage.getItem("cav"))
 
-    var moral = Number(localStorage.getItem("moral"))
+var csh = Number(localStorage.getItem("cash"))
 
-    var forcaart = Number(localStorage.getItem("forcaart"))
+var moral = Number(localStorage.getItem("moral"))
 
-    var forcacav = Number(localStorage.getItem("forcacav"))
+var forcaart = Number(localStorage.getItem("forcaart"))
 
-    var forcaman = Number(localStorage.getItem("forcaman"))
+var forcacav = Number(localStorage.getItem("forcacav"))
 
-    var forcabal = Number(localStorage.getItem("forcabal"))
+var forcaman = Number(localStorage.getItem("forcaman"))
+
+var forcabal = Number(localStorage.getItem("forcabal"))
+
+if (isNaN(forcacav) && isNaN(forcaman) && isNaN(forcabal)) {
+  var resul = forcaart;
+}
+
+if (isNaN(forcaart) && isNaN(forcaman) && isNaN(forcabal)) {
+  var resul = forcacav;
+}
+
+if (isNaN(forcaart) && isNaN(forcaman) && isNaN(forcacav)) {
+  var resul = forcabal;
+}
+
+if (isNaN(forcaart) && isNaN(forcacav) && isNaN(forcabal)) {
+  var resul = forcaman;
+}
+
+    
+    
+var img = localStorage.getItem("img")
 
     img1.innerHTML = img
+
+
+
+    // var resul = 
+
+
+  function bd(){ 
+    
+    if (idUsuario != '' && idUsuario != undefined) {        
+            fetch(`/usuarios/enviarResul/${idUsuario}`, {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    // crie um atributo que recebe o valor recuperado aqui
+                    // Agora vá para o arquivo routes/usuario.js
+                    resulServer: resul
+                })
+            }).then(function (resposta) {
+
+                console.log("resposta: ", resposta);
+
+                if (resposta.ok) {
+                    cardErro.style.display = "block";
+
+                    mensagem_erro.innerHTML = "";
+
+                    limparFormulario();
+                    finalizarAguardar();
+                } else {
+                    throw ("Houve um erro ao tentar realizar o cadastro!");
+                }
+            }).catch(function (resposta) {
+                console.log(`#ERRO: ${resposta}`);
+                // finalizarAguardar();
+            });
+        } else {
+            alert("Erro! Sem ID")
+        }
+
+        return false;
+    }
+
+
 
     var listaruler = [];
 

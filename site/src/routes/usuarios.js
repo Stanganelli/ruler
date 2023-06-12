@@ -21,6 +21,10 @@ router.post("/enviarRuler/:idUsuario", function (req, res) {
     usuarioController.enviarRuler(req, res);
 });
 
+router.post("/enviarResul/:idUsuario", function (req, res) {
+    usuarioController.enviarResul(req, res);
+});
+
 
 router.post("/autenticar", function (req, res) {
     usuarioController.entrar(req, res);

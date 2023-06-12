@@ -32,6 +32,17 @@ insert into usuario (nome,fkEmperador) value
 ('iga', 2);
 
 
+create table resul(
+fkUsuario int,
+resul int,
+primary key (fkUsuario),
+foreign key (fkUsuario) references usuario (idUsuario));
+
+select * from resul;
+
+
+
+
 
  INSERT INTO lider (nome, fkUsuario) VALUES ("otoman", undefined);
  
