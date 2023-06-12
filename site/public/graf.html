@@ -113,6 +113,27 @@
 
     var moraldes3 = Number(localStorage.getItem("moraldes3"))
 
+    var manhom4 = Number(localStorage.getItem("manphom4"))
+
+    var arthom4 = Number(localStorage.getItem("artihom4"))
+
+    var cavalaryhom4 = Number(localStorage.getItem("cavhom4"))
+
+    var cshhom4 = Number(localStorage.getItem("cashhom4"))
+
+    var moralhom4 = Number(localStorage.getItem("moralhom4"))
+
+    var mandes4 = Number(localStorage.getItem("manpdes1"))
+
+    var artdes4 = Number(localStorage.getItem("artides1"))
+
+    var cavalarydes4 = Number(localStorage.getItem("cavdes1"))
+
+    var cshdes4 = Number(localStorage.getItem("cashdes1"))
+
+    var moraldes4 = Number(localStorage.getItem("moraldes1"))
+
+
 
 
 
@@ -126,6 +147,7 @@
                 'desafio 2',
                 'home 2',
                 'desafio 3',
+                'desafio 4',
                 'final',
             ],
             datasets: [{
@@ -134,19 +156,10 @@
                 borderColor: ['#152325'],
                 hoverBackgroundColor: ['#952325'],
                 fill: true,
-                data: [cshhom0, cshdes1, cshhom1, cshdes2, cshhom2, cshdes3, cshhom3],
+                data: [cshhom0, cshdes1, cshhom1, cshdes2, cshhom2, cshdes3, cshhom3, cshdes4, cshhom4],
                 borderWidth: 1
             },
-            {
-                label: "moral",
-
-                borderColor: ['#552325'],
-                backgroundColor: ['#852325'],
-                hoverBackgroundColor: ['#252325'],
-                fill: true,
-                data: [moralhom0, moraldes1, moralhom1, moraldes2, moralhom3, moraldes3, moralhom3],
-                borderWidth: 1
-            }
+           
             ]
         },
         options: {
@@ -158,89 +171,19 @@
         }
     });
 
-    if (mandes1 > 0) {
+    if (isNaN(forcacav) && isNaN(forcaman) && isNaN(forcabal)) {
         const ctx = document.getElementById('myChart2');
         new Chart(ctx, {
             type: 'line',
             data: {
                 labels: ['local',
-                    'desafio 1',
-                    'home 1',
-                    'desafio 2',
-                    'home 2',
-                    'desafio 3',
-                    'final',
-                ],
-                datasets: [{
-                    label: 'Homens',
-                    borderColor: ['#152325'],
-                    backgroundColor: ['#1234'],
-                    hoverBackgroundColor: ['#547'],
-                    fill: true,
-                    data: [manhom0, mandes1, manhom1, mandes2, manhom2, mandes3, manhom3],
-                    borderWidth: 1
-                },
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-    }
-
-    if (cavalarydes1 > 0) {
-        const ctx = document.getElementById('myChart2');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['local',
-                    'desafio 1',
-                    'home 1',
-                    'desafio 2',
-                    'home 2',
-                    'desafio 3',
-                    'final',
-                ],
-                datasets: [{
-                    label: 'cavalos',
-
-                    borderColor: ['#152325'],
-                    backgroundColor: ['#1234'],
-                    hoverBackgroundColor: ['#547'],
-                    fill: true,
-                    data: [cavalaryhom0, cavalarydes1, cavalaryhom1, cavalarydes2, cavalaryhom2, cavalarydes3, cavalaryhom3m3],
-                    borderWidth: 1
-                },
-                ]
-            },
-            options: {
-                scales: {
-                    y: {
-                        beginAtZero: true
-                    }
-                }
-            }
-        });
-
-    }
-
-    if (artdes1 > 0) {
-        const ctx = document.getElementById('myChart2');
-        new Chart(ctx, {
-            type: 'line',
-            data: {
-                labels: ['local',
-                    'desafio 1',
-                    'home 1',
-                    'desafio 2',
-                    'home 2',
-                    'desafio 3',
-                    'final',
+                'desafio 1',
+                'home 1',
+                'desafio 2',
+                'home 2',
+                'desafio 3',
+                'desafio 4',
+                'final',
                 ],
                 datasets: [{
                     label: 'peças de artilharia',
@@ -249,7 +192,7 @@
                     backgroundColor: ['#1234'],
                     hoverBackgroundColor: ['#547'],
                     fill: true,
-                    data: [arthom0, artdes1, arthom1, artdes2, arthom2, artdes3, arthom3m3],
+                    data: [arthom0, artdes1, arthom1, artdes2, arthom2, artdes3, arthom3, artdes4, arthom4],
                     borderWidth: 1
                 },
                 ]
@@ -262,6 +205,129 @@
                 }
             }
         });
+    }
+
+    if (isNaN(forcaart) && isNaN(forcaman) && isNaN(forcabal)) {
+        const ctx = document.getElementById('myChart2');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['local',
+                'desafio 1',
+                'home 1',
+                'desafio 2',
+                'home 2',
+                'desafio 3',
+                'desafio 4',
+                'final',
+                ],
+                datasets: [{
+                    label: 'cavalos',
+
+                    borderColor: ['#152325'],
+                    backgroundColor: ['#1234'],
+                    hoverBackgroundColor: ['#547'],
+                    fill: true,
+                    data: [cavalaryhom0, cavalarydes1, cavalaryhom1, cavalarydes2, cavalaryhom2, cavalarydes3, cavalarydes4, cavalaryhom4],
+                    borderWidth: 1
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    if (isNaN(forcaart) && isNaN(forcaman) && isNaN(forcacav)) {
+        const ctx = document.getElementById('myChart2');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['local',
+                'desafio 1',
+                'home 1',
+                'desafio 2',
+                'home 2',
+                'desafio 3',
+                'desafio 4',
+                'final',
+                ],
+                datasets: [{
+                    label: 'BALANCEAMENTO NÃO CONHECE DIFERENÇAS',
+                    borderColor: ['#152325'],
+                    backgroundColor: ['#1234'],
+                    hoverBackgroundColor: ['#547'],
+                    fill: true,
+                    data: [],
+                    borderWidth: 1
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+    if (isNaN(forcaart) && isNaN(forcacav) && isNaN(forcabal)) {
+        var resul = forcaman;
+        const ctx = document.getElementById('myChart2');
+        new Chart(ctx, {
+            type: 'line',
+            data: {
+                labels: ['local',
+                'desafio 1',
+                'home 1',
+                'desafio 2',
+                'home 2',
+                'desafio 3',
+                'desafio 4',
+                'final',
+                ],
+                datasets: [{
+                    label: 'Homens',
+                    borderColor: ['#152325'],
+                    backgroundColor: ['#1234'],
+                    hoverBackgroundColor: ['#547'],
+                    fill: true,
+                    data: [manhom0, mandes1, manhom1, mandes2, manhom2, mandes3, manhom3, mandes4, manhom4],
+                    borderWidth: 1
+                },
+                ]
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    }
+
+
+
+    if (mandes1 > 0) {
+
+
+    }
+
+    if (cavalarydes1 > 0) {
+
+
+    }
+
+    if (artdes1 > 0) {
+
 
     }
 
