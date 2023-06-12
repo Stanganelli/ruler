@@ -30,7 +30,7 @@
 
 
     siga para os graficos campeão <a href="graf.html"><button>SIGA</button></a>
-    <button onclick="bd()">ENVIAR</button>
+    siga para os graficos campeão </a><button onclick="bd()">SIGA</button>
 <br>
 <br>
 <br>
@@ -45,7 +45,7 @@
                 <option value="otoman">Mehmed II</option>
                 <option value="roman">Augusto</option>
             </select>
-            <button id="botao_colocar" onclick="colocar()">Colocar na lista</button>
+            <button id="botao_colocar" onclick="colocar(); aa()">Colocar na lista</button>
             <div class="boxx11">
                 <div id="div_exibir"></div>
             </div>
@@ -132,10 +132,9 @@ if (isNaN(forcaart) && isNaN(forcacav) && isNaN(forcabal)) {
     
     
 var img = localStorage.getItem("img")
-
+var som = localStorage.getItem("som")
     img1.innerHTML = img
-
-
+    som1.innerHTML = som
 
     // var resul = 
 
@@ -176,6 +175,10 @@ var img = localStorage.getItem("img")
         }
 
         return false;
+        
+    }
+    function aa(){
+    window.location = "graf.html"
     }
 
 
