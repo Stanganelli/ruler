@@ -33,7 +33,7 @@
     <button onclick="buyingc()">comprar cavalaria</button><br>
     <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
     <button onclick="seg()">setar</button>
-   <a href="des1.html"> <button >seguir</button></a>
+   <!-- <a href="des1.html"> <button >seguir</button></a> -->
             </div>
         </span>
 
@@ -54,6 +54,7 @@
 
 </html>
 <script>
+
 
 
     function buyingm() {
@@ -159,9 +160,13 @@ localStorage.setItem("moralhom1", moral);
 
         localStorage.setItem("forcabal", forcabal)
 
-        window.location(url)
+        window.location = 'des2.html'
 
 
     }
+    var img = localStorage.getItem("img")
+var som = localStorage.getItem("som")
+    img1.innerHTML = img
+    som1.innerHTML = som
 
 </script>
