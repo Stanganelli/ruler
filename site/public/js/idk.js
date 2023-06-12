@@ -1,736 +1,6 @@
 
-function calc2() {
-    if (ruler == "franc") {
-        if (forcaman > 0) {
-            if (forcaman > 4 && forcaman < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaman > 8) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaman < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-        }
-        if (forcaart > 0) {
-            if (forcaart > 5 && forcaart < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaart > 8) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaart < 5) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcacav > 0) {
-            if (forcacav >4 && forcacav < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcacav > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcacav < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcabal > 0) {
-            if (forcabal > 5 && forcabal < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcabal > 8) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcabal < 5) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-
-    }
-    if (ruler == "roman") {
-        if (forcaman > 0) {
-            if (forcaman > 5 && forcaman < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaman > 8) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaman < 5) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-        }
-        if (forcaart > 0) {
-            if (forcaart > 5 && forcaart < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaart > 8) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaart < 5) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcacav > 0) {
-            if (forcacav > 5 && forcacav < 8) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcacav > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcacav < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcabal > 0) {
-            if (forcabal > 3 && forcabal < 6) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcabal > 6) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcabal < 3) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-
-    }
-
-    if (ruler == "otoman") {
-        if (forcaman > 0) {
-            if (forcaman > 4 && forcaman < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaman > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaman < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-        }
-        if (forcaart > 0) {
-            if (forcaart > 3 && forcaart < 6) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaart > 6) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaart < 3) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcacav > 0) {
-            if (forcacav > 4 && forcacav < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcacav > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcacav < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcabal > 0) {
-            if (forcabal > 4 && forcabal < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcabal > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcabal < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-
-    }
-
-    if (ruler == "greek") {
-        if (forcaman > 0) {
-            if (forcaman > 2.5 && forcaman < 5.5) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaman > 5.5) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaman < 2.5) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-        }
-        if (forcaart > 0) {
-            if (forcaart > 4 && forcaart < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaart > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaart < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcacav > 0) {
-            if (forcacav > 4 && forcacav < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcacav > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcacav < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcabal > 0) {
-            if (forcabal > 4 && forcabal < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcabal > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcabal < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-
-    }
-
-    if (ruler == "perisan") {
-        if (forcaman > 0) {
-            if (forcaman > 3 && forcaman < 6) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaman > 6) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaman < 3) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-        }
-        if (forcaart > 0) {
-            if (forcaart > 4 && forcaart < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcaart > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcaart < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcacav > 0) {
-            if (forcacav > 4 && forcacav < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcacav > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcacav < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-        if (forcabal > 0) {
-            if (forcabal > 4 && forcabal < 7) {
-                alert("close victory")
-                moral -= 10
-                man -= 100
-                csh += 200
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-            else if (forcabal > 7) {
-                alert("overwelming victory")
-                moral += 10
-                csh += 300
-                div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-            }
-            if (forcabal < 4) {
-                man = 0
-                cavalary = 0
-                art = 0
-                csh = 1000
-                moral = 100
-                alert('perca anfustiante, volte para a tela inicial')
-                div1.innerHTML = `
-<button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-            }
-
-        }
-
-
-    }
-}
-
-function calc1() {
+function calc2() {if (contqt1 == 0) {
+    contqt1 ++
     if (ruler == "franc") {
         if (forcaman > 0) {
             if (forcaman > 4 && forcaman < 7) {
@@ -739,7 +9,7 @@ function calc1() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -748,7 +18,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -770,10 +40,10 @@ function calc1() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -782,7 +52,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -803,13 +73,13 @@ function calc1() {
         }
 
         if (forcacav > 0) {
-            if (forcacav >3 && forcacav < 6) {
+            if (forcacav > 3 && forcacav < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -818,7 +88,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -842,10 +112,10 @@ function calc1() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -854,7 +124,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -884,7 +154,7 @@ function calc1() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -893,7 +163,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -915,10 +185,10 @@ function calc1() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -927,7 +197,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -951,10 +221,10 @@ function calc1() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -963,7 +233,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -987,10 +257,10 @@ function calc1() {
             if (forcabal > 3 && forcabal < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -999,7 +269,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1030,7 +300,7 @@ function calc1() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1039,7 +309,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1061,10 +331,10 @@ function calc1() {
             if (forcaart > 3 && forcaart < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1073,7 +343,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1097,10 +367,10 @@ function calc1() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1109,7 +379,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1133,10 +403,10 @@ function calc1() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1145,7 +415,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1176,7 +446,7 @@ function calc1() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1185,7 +455,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1207,10 +477,10 @@ function calc1() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1219,7 +489,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1243,10 +513,10 @@ function calc1() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1255,7 +525,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1279,10 +549,10 @@ function calc1() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1291,7 +561,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1322,7 +592,7 @@ function calc1() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1331,7 +601,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1353,10 +623,10 @@ function calc1() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1365,7 +635,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1389,10 +659,10 @@ function calc1() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1401,7 +671,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1425,10 +695,10 @@ function calc1() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1437,7 +707,7 @@ function calc1() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome1()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1459,8 +729,13 @@ function calc1() {
 
 
     }
+}else{
+    alert("clica só uma vez meo")
 }
-function calc3() {
+}
+
+function calc1() {if (contqt1 == 0) {
+    contqt1 ++
     if (ruler == "franc") {
         if (forcaman > 0) {
             if (forcaman > 4 && forcaman < 7) {
@@ -1469,7 +744,7 @@ function calc3() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1478,7 +753,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1500,10 +775,10 @@ function calc3() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1512,7 +787,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1533,13 +808,13 @@ function calc3() {
         }
 
         if (forcacav > 0) {
-            if (forcacav >3 && forcacav < 6) {
+            if (forcacav > 3 && forcacav < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1548,7 +823,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1572,10 +847,10 @@ function calc3() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1584,7 +859,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1614,7 +889,7 @@ function calc3() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1623,7 +898,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1645,10 +920,10 @@ function calc3() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1657,7 +932,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1681,10 +956,10 @@ function calc3() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1693,7 +968,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1717,10 +992,10 @@ function calc3() {
             if (forcabal > 3 && forcabal < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1729,7 +1004,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1760,7 +1035,7 @@ function calc3() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1769,7 +1044,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1791,10 +1066,10 @@ function calc3() {
             if (forcaart > 3 && forcaart < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1803,7 +1078,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1827,10 +1102,10 @@ function calc3() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1839,7 +1114,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1863,10 +1138,10 @@ function calc3() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1875,7 +1150,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1906,7 +1181,7 @@ function calc3() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1915,7 +1190,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1937,10 +1212,10 @@ function calc3() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1949,7 +1224,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -1973,10 +1248,10 @@ function calc3() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -1985,7 +1260,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2009,10 +1284,10 @@ function calc3() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2021,7 +1296,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2052,7 +1327,7 @@ function calc3() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2061,7 +1336,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2083,10 +1358,10 @@ function calc3() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2095,7 +1370,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2119,10 +1394,10 @@ function calc3() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2131,7 +1406,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2155,10 +1430,10 @@ function calc3() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2167,7 +1442,7 @@ function calc3() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome2()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2189,8 +1464,12 @@ function calc3() {
 
 
     }
+}else{
+    alert("clica só uma vez meo")
 }
-function final() {
+}
+function calc3() {if (contqt1 == 0) {
+    contqt1 ++
     if (ruler == "franc") {
         if (forcaman > 0) {
             if (forcaman > 4 && forcaman < 7) {
@@ -2199,7 +1478,7 @@ function final() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2208,7 +1487,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2230,10 +1509,10 @@ function final() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2242,7 +1521,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2263,13 +1542,13 @@ function final() {
         }
 
         if (forcacav > 0) {
-            if (forcacav >3 && forcacav < 6) {
+            if (forcacav > 3 && forcacav < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2278,7 +1557,741 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcacav < 3) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcabal > 0) {
+            if (forcabal > 4 && forcabal < 7) {
+                alert("close victory")
+            moral -= 10
+                man -= 0
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcabal > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcabal < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+
+    }
+    if (ruler == "roman") {
+        if (forcaman > 0) {
+            if (forcaman > 4 && forcaman < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 100
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaman > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaman < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+        }
+        if (forcaart > 0) {
+            if (forcaart > 4 && forcaart < 7) {
+                alert("close victory")
+                moral -= 10
+                art -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaart > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaart < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcacav > 0) {
+            if (forcacav > 4 && forcacav < 7) {
+                alert("close victory")
+                moral -= 10
+                cavalary -= 50
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcacav > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcacav < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcabal > 0) {
+            if (forcabal > 3 && forcabal < 6) {
+                alert("close victory")
+                moral -= 10
+                man -= 0
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcabal > 6) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcabal < 3) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+
+    }
+
+    if (ruler == "otoman") {
+        if (forcaman > 0) {
+            if (forcaman > 4 && forcaman < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 100
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaman > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaman < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+        }
+        if (forcaart > 0) {
+            if (forcaart > 3 && forcaart < 6) {
+                alert("close victory")
+                moral -= 10
+                art -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaart > 6) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaart < 3) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcacav > 0) {
+            if (forcacav > 4 && forcacav < 7) {
+                alert("close victory")
+                moral -= 10
+                cavalary -= 50
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcacav > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcacav < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcabal > 0) {
+            if (forcabal > 4 && forcabal < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 0
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcabal > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcabal < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+
+    }
+
+    if (ruler == "greek") {
+        if (forcaman > 0) {
+            if (forcaman > 2.5 && forcaman < 5.5) {
+                alert("close victory")
+                moral -= 10
+                man -= 100
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaman > 5.5) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaman < 2.5) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+        }
+        if (forcaart > 0) {
+            if (forcaart > 4 && forcaart < 7) {
+                alert("close victory")
+                moral -= 10
+                art -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaart > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaart < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcacav > 0) {
+            if (forcacav > 4 && forcacav < 7) {
+                alert("close victory")
+                moral -= 10
+                cavalary -= 50
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcacav > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcacav < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcabal > 0) {
+            if (forcabal > 4 && forcabal < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 0
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcabal > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcabal < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+
+    }
+
+    if (ruler == "perisan") {
+        if (forcaman > 0) {
+            if (forcaman > 3 && forcaman < 6) {
+                alert("close victory")
+                moral -= 10
+                man -= 100
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaman > 6) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaman < 3) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+        }
+        if (forcaart > 0) {
+            if (forcaart > 4 && forcaart < 7) {
+                alert("close victory")
+                moral -= 10
+                art -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaart > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaart < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcacav > 0) {
+            if (forcacav > 4 && forcacav < 7) {
+                alert("close victory")
+                moral -= 10
+                cavalary -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcacav > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcacav < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcabal > 0) {
+            if (forcabal > 4 && forcabal < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 0
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcabal > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome3()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcabal < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+
+    }
+}else{
+    alert("clica só uma vez meo")
+}
+}
+function final() {if (contqt1 == 0) {
+    contqt1 ++
+    if (ruler == "franc") {
+        if (forcaman > 0) {
+            if (forcaman > 4 && forcaman < 7) {
+                alert("close victory")
+                moral -= 10
+                man -= 100
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaman > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaman < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+        }
+        if (forcaart > 0) {
+            if (forcaart > 4 && forcaart < 7) {
+                alert("close victory")
+                moral -= 10
+                art -= 25
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcaart > 7) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+
+            }
+            if (forcaart < 4) {
+                man = 0
+                cavalary = 0
+                art = 0
+                csh = 1000
+                moral = 100
+                alert('perca anfustiante, volte para a tela inicial')
+                div1.innerHTML = `
+<button onclick="perdeu()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+
+        }
+
+        if (forcacav > 0) {
+            if (forcacav > 3 && forcacav < 6) {
+                alert("close victory")
+                moral -= 10
+                cavalary -= 50
+                csh += 200
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+
+            }
+            else if (forcacav > 6) {
+                alert("overwelming victory")
+                moral += 10
+                csh += 300
+                div1.innerHTML = `
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2302,10 +2315,10 @@ function final() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2314,7 +2327,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2344,7 +2357,7 @@ function final() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2353,7 +2366,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2375,10 +2388,10 @@ function final() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2387,7 +2400,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2411,10 +2424,10 @@ function final() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2423,7 +2436,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2447,10 +2460,10 @@ function final() {
             if (forcabal > 3 && forcabal < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2459,7 +2472,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2490,7 +2503,7 @@ function final() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2499,7 +2512,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2521,10 +2534,10 @@ function final() {
             if (forcaart > 3 && forcaart < 6) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2533,7 +2546,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2557,10 +2570,10 @@ function final() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2569,7 +2582,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2593,10 +2606,10 @@ function final() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2605,7 +2618,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2636,7 +2649,7 @@ function final() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2645,7 +2658,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2667,10 +2680,10 @@ function final() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2679,7 +2692,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2703,10 +2716,10 @@ function final() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 50
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2715,7 +2728,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2739,10 +2752,10 @@ function final() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2751,7 +2764,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2782,7 +2795,7 @@ function final() {
                 man -= 100
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2791,7 +2804,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2813,10 +2826,10 @@ function final() {
             if (forcaart > 4 && forcaart < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                art -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2825,7 +2838,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2849,10 +2862,10 @@ function final() {
             if (forcacav > 4 && forcacav < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                cavalary -= 25
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2861,7 +2874,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2885,10 +2898,10 @@ function final() {
             if (forcabal > 4 && forcabal < 7) {
                 alert("close victory")
                 moral -= 10
-                man -= 100
+                man -= 0
                 csh += 200
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
             }
@@ -2897,7 +2910,7 @@ function final() {
                 moral += 10
                 csh += 300
                 div1.innerHTML = `
-<button onclick="voltaahome()">voltar a suas guarnições</button>`
+<button onclick="voltaahome4()">voltar a suas guarnições</button>`
                 divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
 
 
@@ -2919,6 +2932,9 @@ function final() {
 
 
     }
+}else{
+    alert("clica só uma vez meo")
+}
 }
 
 
