@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/fim.css">
     <script src="js/rulerimage.js"></script>
+    <script src="js/onloadshom.js"></script>
+
     <title>Document</title>
 </head>
 
@@ -22,115 +24,70 @@
                 <li class="hoover"><a href="chart.html">graficos</a></li>
             </ul>
         </span>
-    </nav>
-</body>
-<div class="conteiner">
-    <span class="game">
-        <div id="divexib"></div>
-        <div class="txt">
-            
-<button onclick="seg()">setar</button>
-        </div>
-    </span>
+    </nav><div class="conteiner">
+        <span class="game">
+            <div id="divexib"></div>
+            <div class="txt">
+                
+    <button onclick="buyingm()">comprar infant</button><br>
+    <button onclick="buyingc()">comprar cavalaria</button><br>
+    <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
+    <button onclick="seg()">setar</button>
+            </div>
+        </span>
 
-    <div class="boxx2">
-        <div class="boximg">
-            <span id="img1"></span>
+        <div class="boxx2">
+            <div class="boximg">
+                <span id="img1"></span>
+            </div>
+            <audio id="som1" controls>
+                <source src="" type="audio/mpeg">
+            </audio>
         </div>
-        <audio id="som1" controls>
-            <source src="" type="audio/mpeg">
-        </audio>
+        <br>
+        <div id="div1"></div>
     </div>
-    <br>
-    <div id="div1"></div>
-</div>
 
+</body>
 
 </html>
 <script>
 
-
-var img = localStorage.getItem("img")
-    var som = localStorage.getItem("som")
-
-    img1.innerHTML = img
-    som1.innerHTML = som
+    function buyingm() {
+        if (csh >= 100) {
+            man = man += 100
+            csh = csh -= 100
 
 
-
-    var ruler = localStorage.getItem("emperador")
-    var man = Number(localStorage.getItem("manp"))
-
-    var art = Number(localStorage.getItem("arti"))
-
-    var cavalary = Number(localStorage.getItem("cav"))
-
-    var csh = Number(localStorage.getItem("cash"))
-
-    var moral = Number(localStorage.getItem("moral"))
-
-    var forcaart = Number(localStorage.getItem("forcaart"))
-
-    var forcacav = Number(localStorage.getItem("forcacav"))
-
-    var forcaman = Number(localStorage.getItem("forcaman"))
-
-    var forcabal = Number(localStorage.getItem("forcabal"))
-
-
-    if (ruler == "roman") {
-        moneytim = "denarius"
-
-    }
-    if (ruler == "greek") {
-        moneytim = "drachmas"
-    }
-    if (ruler == "franc") {
-
-        moneytim = "centimes"
-    }
-    if (ruler == "otoman") {
-        moneytim = "liras"
-
-    }
-    if (ruler == "perisan") {
-        moneytim = "dìngs"
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
     }
 
-    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-
-
-
-    
-
-
-
-    if (ruler == "roman") {
-        moneytim = "denarius"
-
-        spanart.innerHTML = "linha de arqueiros"
+    function buyingc() {
+        if (csh >= 250) {
+            cavalary = cavalary += 100
+            csh = csh -= 250
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+        else alert(`${moneytim} insuficente`)
     }
-    if (ruler == "greek") {
-        moneytim = "drachmas"
-        spanart.innerHTML = "linha de arqueiros"
-    }
-    if (ruler == "franc") {
 
-        spanart.innerHTML = "canhão"
-        moneytim = "centimes"
+    function buyinga() {
+        if (csh >= 500) {
+            art = art += 100
+            csh = csh -= 500
 
-        spanart.innerHTML = "armadas de canhões"
-    }
-    if (ruler == "otoman") {
-        moneytim = "liras"
 
-        spanart.innerHTML = "armadas de canhões"
-    }
-    if (ruler == "perisan") {
-        moneytim = "dìngs"
 
-        spanart.innerHTML = "linha de arqueiros"
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        }
+
+        else alert(`${moneytim} insuficente`)
     }
+
+
+
 
     function seg() {
         var forcav = Number(cavalary * 0.025)
@@ -164,6 +121,7 @@ var img = localStorage.getItem("img")
             }
         }
 
+
         
 localStorage.setItem("manphom3", man);
 
@@ -176,6 +134,8 @@ localStorage.setItem("cavhom3", cavalary);
 localStorage.setItem("cashhom3", csh);
 
 localStorage.setItem("moralhom3", moral);
+
+
 
         localStorage.setItem("manp", man);
 
@@ -195,7 +155,7 @@ localStorage.setItem("moralhom3", moral);
 
         localStorage.setItem("forcabal", forcabal)
 
-        window.location = "fim.html"
+        window.location = "des4.html"
 
 
     }

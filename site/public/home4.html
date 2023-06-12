@@ -22,74 +22,34 @@
                 <li class="hoover"><a href="login.html">login</a></li>
                 <li class="hoover"><a href="cadastro.html">cadastro</a></li>
                 <li class="hoover"><a href="chart.html">graficos</a></li>
-    <script src="js/onloads.js"></script>
-
             </ul>
         </span>
-    </nav><div class="conteiner">
-        <span class="game">
-            <div id="divexib"></div>
-            <div class="txt">
-                
-    <button onclick="buyingm()">comprar infant</button><br>
-    <button onclick="buyingc()">comprar cavalaria</button><br>
-    <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
-    <button onclick="seg()">setar</button>
-            </div>
-        </span>
-
-        <div class="boxx2">
-            <div class="boximg">
-                <span id="img1"></span>
-            </div>
-            <audio id="som1" controls>
-                <source src="" type="audio/mpeg">
-            </audio>
-        </div>
-        <br>
-        <div id="div1"></div>
-    </div>
-
+    </nav>
 </body>
+<div class="conteiner">
+    <span class="game">
+        <div id="divexib"></div>
+        <div class="txt">
+            
+<button onclick="seg()">CHEGOU AO FIM DA SUA JORNADA SIGA EM FRENTE</button>
+        </div>
+    </span>
+
+    <div class="boxx2">
+        <div class="boximg">
+            <span id="img1"></span>
+        </div>
+        <audio id="som1" controls>
+            <source src="" type="audio/mpeg">
+        </audio>
+    </div>
+    <br>
+    <div id="div1"></div>
+</div>
+
 
 </html>
 <script>
-
-
-    function buyingm() {
-        if (csh >= 100) {
-            man = man += 100
-            csh = csh -= 100
-
-
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-        }
-        else alert(`${moneytim} insuficente`)
-    }
-
-    function buyingc() {
-        if (csh >= 250) {
-            cavalary = cavalary += 100
-            csh = csh -= 250
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-        }
-        else alert(`${moneytim} insuficente`)
-    }
-
-    function buyinga() {
-        if (csh >= 500) {
-            art = art += 100
-            csh = csh -= 500
-
-
-
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
-        }
-
-        else alert(`${moneytim} insuficente`)
-    }
-
-
 
     function seg() {
         var forcav = Number(cavalary * 0.025)
@@ -123,21 +83,18 @@
             }
         }
 
-
         
-localStorage.setItem("manphom2", man);
+localStorage.setItem("manphom4", man);
 
-localStorage.setItem("manphom2", man);
+localStorage.setItem("manphom4", man);
 
-localStorage.setItem("artihom2", art);
+localStorage.setItem("artihom4", art);
 
-localStorage.setItem("cavhom2", cavalary);
+localStorage.setItem("cavhom4", cavalary);
 
-localStorage.setItem("cashhom2", csh);
+localStorage.setItem("cashhom4", csh);
 
-localStorage.setItem("moralhom2", moral);
-
-
+localStorage.setItem("moralhom4", moral);
 
         localStorage.setItem("manp", man);
 
@@ -157,7 +114,7 @@ localStorage.setItem("moralhom2", moral);
 
         localStorage.setItem("forcabal", forcabal)
 
-        window.location = "des3.html"
+        window.location = "fim.html"
 
 
     }
