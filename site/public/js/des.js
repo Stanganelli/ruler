@@ -37,7 +37,7 @@ function voltaahome1() {
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location = "home2.html"
+    window.location = "home1.html"
 }
 
 
@@ -78,7 +78,7 @@ function voltaahome2() {
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location(url)
+    window.location = "home2.html"
 }
 
 function perdeu() {

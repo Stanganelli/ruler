@@ -1,5 +1,4 @@
-var img = localStorage.getItem("img")
-var som = localStorage.getItem("som")
+
 
 var contqt1 = 0
 
