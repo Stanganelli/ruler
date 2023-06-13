@@ -35,6 +35,7 @@
 
 </html>
 <script>
+    
     // O gráfico é construído com três funções:
     // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
     // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
@@ -48,7 +49,7 @@
     //     Para ajustar o "select", ajuste o comando sql em src/models
     window.onload = obterDadosGrafico();
     
-    function obterDadosGrafico() {
+    function dadosGrafico1(){
         fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
@@ -64,6 +65,28 @@
             .catch(function (error) {
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
+    }
+    
+    function dadosGrafico2(){
+        fetch(`/medidas/ultimasa/`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta1) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta1)}`);
+                    
+
+                    plotarGrafico2(resposta1);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
+    function obterDadosGrafico() {
+        dadosGrafico1()
+        dadosGrafico2()
     }
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
@@ -122,28 +145,13 @@
 
         // setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
     }
-    function obterDadosGrafico1() {
-        fetch(`/medidas/ultimasa/`, { cache: 'no-store' }).then(function (response) {
-            if (response.ok) {
-                response.json().then(function (resposta) {
-                    console.log(`Dados recebidos: ${JSON.stringify(resposta)}`);
-                    resposta.reverse();
-
-                    plotarGrafico(resposta);
-                });
-            } else {
-                console.error('Nenhum dado encontrado ou erro na API');
-            }
-        })
-            .catch(function (error) {
-                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
-            });
-    }
+    // function obterDadosGrafico1() {
+        
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
-    function plotarGrafico(resposta, idAquario) {
+    function plotarGrafico2(resposta1) {
 
         console.log('iniciando plotagem do gráfico...');
 
@@ -154,7 +162,7 @@
         let dados = {
             labels: labels,
             datasets: [{
-                label: 'Quantidade que cada lider foi esoclhido',
+                label: 'MEDIA de pontuação final de cada lider',
                 data: [],
                 fill: false,
                 borderColor: '#fff',
@@ -164,13 +172,14 @@
 
         console.log('----------------------------------------------')
         console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-        console.log(resposta)
+        console.log(resposta1)
 
         // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
+        for (i = 0; i < resposta1.length; i++) {
+            var registro = resposta1[i];
+
             labels.push(registro.nome);
-            dados.datasets[0].data.push(registro.qtd_pessoas);
+            dados.datasets[0].data.push(registro.total);
             // dados.datasets[1].data.push(registro.temperatura);
         }
 
@@ -196,5 +205,8 @@
 
         // setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
     }
+
+
+    
 
 </script>

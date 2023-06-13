@@ -44,6 +44,8 @@ select * from resul;
 
 
 
+
+
  INSERT INTO lider (nome, fkUsuario) VALUES ("otoman", undefined);
  
  
@@ -51,3 +53,23 @@ select * from resul;
  
  
  update  usuario set fkemperador = 1 where idUsuario = 2;
+ 
+ 
+ 
+
+
+select sum(resul) from resul 
+	join usuario on idUsuario = fkUsuario
+		where fkEmperador = 1;
+        
+         
+select count(fkEmperador) from usuario where fkEmperador = 1;
+
+
+select count(fkEmperador)as jogadores from usuario where fkEmperador = 1 ;
+ create view VW_RESULTADO
+ as select truncate(sum(resul) / (select count(fkEmperador)as jogadores from usuario where fkEmperador = 1),2) as total, lider.nome from resul 
+	right join usuario on idUsuario = fkUsuario join lider on fkEmperador = idLider
+		group by fkEmperador;
+        
+        select * from VW_RESULTADO;
