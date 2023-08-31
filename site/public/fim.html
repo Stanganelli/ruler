@@ -45,7 +45,7 @@
                 <option value="otoman">Mehmed II</option>
                 <option value="roman">Augusto</option>
             </select>
-            <button id="botao_colocar" onclick="colocar(); aa()">Colocar na lista</button>
+            <button id="botao_colocar" onclick="colocar()">Colocar na lista</button>
             <div class="boxx11">
                 <div id="div_exibir"></div>
             </div>
@@ -54,8 +54,8 @@
             <div class="boximg">
                 <span id="img1"></span>
             </div>
-            <audio controls>
-                <source src="../musicaSimplePlan/musica.mp3" type="audio/mpeg">
+            <audio id="som1" controls>
+                <source src="" type="audio/mpeg">
             </audio>
         </div>
     </div>
@@ -181,34 +181,34 @@ var som = localStorage.getItem("som")
     window.location = "graf.html"
     }
 
-
+//entregavel for e vetor, aqui conserto a funcionalidade que não entreguei na primeira chance do projeto individual
 
     var listaruler = [];
-
-
-
+    //aqui crio as variaveis que vou utlizar
+    var ruler = ""
     function colocar() {
-        var ruler = cq1.value;
+        //aqui peço e mudo o valor da variavel de acordo com o escolhido
+        ruler = cq1.value;
         if (ruler == "franc") {
-            var ruler2 = "Napoleão Bonaparte"
+            ruler2 = "Napoleão Bonaparte"
         }
         if (ruler == "perisan") {
-            var ruler2 = "Quin"
+             ruler2 = "Quin"
         }
         if (ruler == "roman") {
-            var ruler2 = "Imperador Augusto"
+             ruler2 = "Imperador Augusto"
         }
         if (ruler == "otoman") {
-            var ruler2 = "Mehemed II"
+             ruler2 = "Mehemed II"
         }
         if (ruler == "greek") {
-            var ruler2 = "Alexandre o grande"
+             ruler2 = "Alexandre o grande"
         }
 
 
 
 
-
+//aqui coloco na lista e exibo "ultimo" inserido
         listaruler.push(ruler2)
         div_exibir.innerHTML = ``;
         for (var contador = 0; contador < listaruler.length; contador++) {
