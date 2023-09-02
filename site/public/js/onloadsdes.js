@@ -1,6 +1,9 @@
 
-
 var contqt1 = 0
+
+
+
+
 
 var ruler = localStorage.getItem("emperador")
 var man = Number(localStorage.getItem("manp"))
@@ -20,7 +23,7 @@ var forcacav = Number(localStorage.getItem("forcacav"))
 var forcaman = Number(localStorage.getItem("forcaman"))
 
 var forcabal = Number(localStorage.getItem("forcabal"))
-divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
 if (moral > 50) {
@@ -37,26 +40,35 @@ if (moral > 25) {
 }
 if (ruler == "roman") {
     moneytim = "denarius"
+    spanart.innerHTML = "linha de arqueiros"
+
 
 }
 if (ruler == "greek") {
     moneytim = "drachmas"
+    spanart.innerHTML = "linha de arqueiros"
+
 }
 if (ruler == "franc") {
+    spanart.innerHTML = "armadas de canhões"
 
     moneytim = "centimes"
 }
 if (ruler == "otoman") {
     moneytim = "liras"
+    spanart.innerHTML = "armadas de canhões"
 
 }
 if (ruler == "perisan") {
     moneytim = "dìngs"
+    spanart.innerHTML = "linha de arqueiros"
+
 
 }
-divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas<br>`
+divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas<br>`
 
 
+var img = localStorage.getItem("img")
+    var som = localStorage.getItem
 img1.innerHTML = img
 som1.innerHTML = som
-

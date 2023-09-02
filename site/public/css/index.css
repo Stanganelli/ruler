@@ -3,12 +3,12 @@ body {
     margin: 0;
   }
   
-  header {
+  /* header {
     background-color: red;
     display: flex;
     justify-content: space-around;
     align-items: center;
-  }
+  } */
   
   header img {
     width: 90px;

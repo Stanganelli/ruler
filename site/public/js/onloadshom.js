@@ -1,10 +1,4 @@
 
-var img = localStorage.getItem("img")
-    var som = localStorage.getItem("som")
-
-    img1.innerHTML = img
-    som1.innerHTML = som
-
 
 
 
@@ -26,7 +20,7 @@ var img = localStorage.getItem("img")
     var forcaman = Number(localStorage.getItem("forcaman"))
 
     var forcabal = Number(localStorage.getItem("forcabal"))
-divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
 
@@ -49,7 +43,7 @@ divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} sold
         moneytim = "dìngs"
     }
 
-    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+    divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
     if (ruler == "roman") {
@@ -78,3 +72,9 @@ divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} sold
 
         spanart.innerHTML = "linha de arqueiros"
     }
+    
+var img = localStorage.getItem("img")
+var som = localStorage.getItem("som")
+
+img1.innerHTML = img
+som1.innerHTML = som

@@ -40,7 +40,7 @@ function buyingm() {
 
             spanart.innerHTML = "linha de arqueiros"
         }
-        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
     }
     else alert(`${moneytim} insuficente`)
 }
@@ -75,7 +75,7 @@ function buyingc() {
 
             spanart.innerHTML = "linha de arqueiros"
         }
-        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
     }
     else alert(`${moneytim} insuficente`)
 }
@@ -115,7 +115,7 @@ function buyinga() {
 
             spanart.innerHTML = "linha de arqueiros"
         }
-        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+        divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
     }
 
     else alert(`${moneytim} insuficente`)

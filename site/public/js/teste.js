@@ -9,7 +9,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaman > 7) {
@@ -18,7 +18,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -31,7 +31,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
         }
@@ -43,7 +43,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaart > 7) {
@@ -52,7 +52,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -65,7 +65,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -79,7 +79,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcacav > 6) {
@@ -88,7 +88,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -101,7 +101,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -115,7 +115,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcabal > 7) {
@@ -124,7 +124,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -137,7 +137,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -154,7 +154,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaman > 7) {
@@ -163,7 +163,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -176,7 +176,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
         }
@@ -188,7 +188,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaart > 7) {
@@ -197,7 +197,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -210,7 +210,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -224,7 +224,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcacav > 7) {
@@ -233,7 +233,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -246,7 +246,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -260,7 +260,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcabal > 6) {
@@ -269,7 +269,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -282,7 +282,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -300,7 +300,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaman > 7) {
@@ -309,7 +309,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -322,7 +322,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
         }
@@ -334,7 +334,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaart > 6) {
@@ -343,7 +343,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -356,7 +356,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -370,7 +370,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcacav > 7) {
@@ -379,7 +379,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -392,7 +392,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -406,7 +406,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcabal > 7) {
@@ -415,7 +415,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -428,7 +428,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -446,7 +446,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaman > 5.5) {
@@ -455,7 +455,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -468,7 +468,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
         }
@@ -480,7 +480,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaart > 7) {
@@ -489,7 +489,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -502,7 +502,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -516,7 +516,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcacav > 7) {
@@ -525,7 +525,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -538,7 +538,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -552,7 +552,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcabal > 7) {
@@ -561,7 +561,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -574,7 +574,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -592,7 +592,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaman > 6) {
@@ -601,7 +601,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -614,7 +614,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
         }
@@ -626,7 +626,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcaart > 7) {
@@ -635,7 +635,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -648,7 +648,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -662,7 +662,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcacav > 7) {
@@ -671,7 +671,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -684,7 +684,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
@@ -698,7 +698,7 @@ if (contqt1 == 0) {
                 csh += 200
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
             else if (forcabal > 7) {
@@ -707,7 +707,7 @@ if (contqt1 == 0) {
                 csh += 300
                 div1.innerHTML = `
 <button onclick="voltaahome1()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
 
             }
@@ -720,7 +720,7 @@ if (contqt1 == 0) {
                 alert('perca anfustiante, volte para a tela inicial')
                 div1.innerHTML = `
 <button onclick="perdeu()">voltar a suas guarnições</button>`
-                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de infantria,<br> ${cavalary}de horseman.<br>${art} linhas especializadas`
+                divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
 
             }
 
