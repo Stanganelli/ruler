@@ -29,8 +29,7 @@
 </nav>
 
 
-    siga para os graficos campeão <a href="graf.html"><button>SIGA</button></a>
-    siga para os graficos campeão </a><button onclick="bd()">SIGA</button>
+    siga para os graficos campeão </a><button onclick="bd(); ">SIGA</button>
 <br>
 <br>
 <br>
@@ -91,6 +90,10 @@
 
 
 <script>
+    function mudar(){
+        var link = "graf.html"
+        window.location(link)
+    }
 
 
 var idUsuario = sessionStorage.ID_USUARIO

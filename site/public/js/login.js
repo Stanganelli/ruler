@@ -1,7 +1,8 @@
 function verificar(){
     //verifico se os campos estão preenchidos
-    var emailVar = input_email.value
-    var senhaVar = input_senha.value
+    //tinha errado o nome das váriaveis e agora estou arrumando
+    var emailVar = email_input.value
+    var senhaVar = senha_input.value
     if(emailVar == "" || senhaVar == ""){
         alert('preencha todos os campos')
     } 
@@ -30,7 +31,7 @@ fetch("/usuarios/autenticar", {
                     sessionStorage.ID_USUARIO = json.id;
 
                     setTimeout(function () {
-                        window.location = "home?.html";
+                        window.location = "home.html";
                     }, 1000); // apenas para exibir o loading
 
                 });
