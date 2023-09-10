@@ -50,7 +50,7 @@ if (emailVar.indexOf("@") == -1 || emailVar.endsWith(".com") == false) {
             input_confirmar_senha.className = "invalido"
 
         }
-        window.location = 'index.html'
+        window.location = 'login.html'
     }
 //chamo na usuarios.js o caminho cadastras
     fetch("/usuarios/cadastrar", {

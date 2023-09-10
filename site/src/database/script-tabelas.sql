@@ -67,6 +67,8 @@ select count(fkEmperador) from usuario where fkEmperador = 1;
 
 
 select count(fkEmperador)as jogadores from usuario where fkEmperador = 1 ;
+-- aqui a view é criada Este código SQL cria uma view chamada VW_RESULTADO que calcula a média truncada de "resul" para jogadores pela fkEmperador 
+--  juntamente com o nome do líder correspondente. para selecionar 
  create view VW_RESULTADO
  as select truncate(sum(resul) / (select count(fkEmperador)as jogadores from usuario where fkEmperador = 1),2) as total, lider.nome from resul 
 	right join usuario on idUsuario = fkUsuario join lider on fkEmperador = idLider

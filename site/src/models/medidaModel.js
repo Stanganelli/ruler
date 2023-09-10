@@ -9,6 +9,7 @@ function buscarUltimasMedidas() {
 
 
 function buscarUltimasMedidasa() {
+    //aqui ultilizo a view criada em script-tabelas.sql
     instrucaoSql1 = `SELECT * FROM VW_RESULTADO`;
 
     console.log("Executando a instrução SQL: \n" + instrucaoSql1 );
