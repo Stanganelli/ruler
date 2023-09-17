@@ -28,10 +28,12 @@ fetch("/usuarios/autenticar", {
                     //seto no session storage as informações do usuario 
                     sessionStorage.EMAIL_USUARIO = json.email;
                     sessionStorage.NOME_USUARIO = json.nome;
-                    sessionStorage.ID_USUARIO = json.id;
+                    //erro corrigido abaixo, cujo demorou a semana toda de testes, erros, mudanças no bd, para no final ter sido um erro de sintaxe
+                    sessionStorage.ID_USUARIO = json.idUsuario;
 
                     setTimeout(function () {
-                        window.location = "home.html";
+                        //aqui estava erroneamento encaminhando para a home ao invés da tela de escolha
+                        window.location = "escolha.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

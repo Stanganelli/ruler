@@ -44,24 +44,35 @@
     //vejo que lider o usuario escolheu
     function aescol() {
         var lider = cq1.value;
+        var liderexib = ""
         if (lider == '1') {
             var lider1 = "franc"
+        var liderexib = "Napoleão"
+
         }
         if (lider == '2') {
             var lider1 = "greek"
+        var liderexib = "Alexandre"
+
         }
         if (lider == '3') {
             var lider1 = "perisan"
+        var liderexib = "Quin"
+
         }
         if (lider == '4') {
             var lider1 = "otoman"
+        var liderexib = "Mehemed II"
+
         }
         if (lider == '5') {
             var lider1 = "roman"
+        var liderexib = "Augusto"
+
         }
         localStorage.setItem("emperador", lider1);
 
-        alert(`VOCÊ ESCOLHEU A ${lider}}`)
+        alert(`VOCÊ ESCOLHEU A ${liderexib}`)
 
         var idUsuario = sessionStorage.ID_USUARIO
 
