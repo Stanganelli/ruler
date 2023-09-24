@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fim.css">
+    <link rel="stylesheet" href="css/mp.css">
     <title>Document</title>
 </head>
 <body>
@@ -21,23 +20,61 @@
             </ul>
         </span>
     </nav>
-<div class="exib">
-    <span id="span1"></span>  <span id="span2"></span>
-    EM CONSTRUÇÃO
+
+
+    <div class="oval-img top-left">
+        <img src="media/augusuts.jpg" alt="">
+    </div>
+    <div class="oval-opc top-left">
+        <!-- aprendi a utilizar um place holder em selects no seguinte site https://www.tutorialrepublic.com/faq/how-to-make-a-placeholder-for-a-select-box-in-html.php -->
+        <select required id="liderPlayer1">
+            <option value="" disabled selected hidden>Escolha Player 1</option>
+            <option value="1">Napoleão</option>
+            <option value="2">Alexandre</option>
+            <option value="3">Quin</option>
+            <option value="4">Mehmed II</option>
+            <option value="5">Augusto</option>
+        </select>
+        <button onclick="comprarInfant1()">comprar Infantaria </button><br>
+        <button onclick="comprarCav1()">comprar cavalaria</button><br>
+        <button onclick="comprarEsp1()">comprar <span id="spanart"></span></button><br>
+    </div>
+
+
+    <div class="oval-img top-right">
+        <img src="media/augusuts.jpg" alt="">
+    </div>
+    <div class="oval-opc top-right">
+        <select required id="liderPlayer2">
+            <option value="" disabled selected hidden>Escolha Player 2</option>
+            <option value="1">Napoleão</option>
+            <option value="2">Alexandre</option>
+            <option value="3">Quin</option>
+            <option value="4">Mehmed II</option>
+            <option value="5">Augusto</option>
+        </select>
+        <button onclick="comprarInfant2()">comprar Infantaria </button><br>
+        <button onclick="comprarCav2()">comprar cavalaria</button><br>
+        <button onclick="comprarEsp2()">comprar <span id="spanart"></span></button><br>
+    </div>
+</body>
+<!-- Div no meio -->
+<div class="middle-div">
+    <!-- Conteúdo da div no meio -->
+
+    <div class="combat-button">
+        <button>Combate</button>
+    </div>
+    
 </div>
 
+</div>
 
     
 </body>
 </html>
 
 <script>
-    var csh = 1000
-var morale = 100
-var man = 0
-var cavalary = 0
-var art = 0
-var moneytim = ""
 
 
 
