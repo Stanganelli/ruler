@@ -33,7 +33,7 @@ fetch("/usuarios/autenticar", {
 
                     setTimeout(function () {
                         //aqui estava erroneamento encaminhando para a home ao invés da tela de escolha
-                        window.location = "escolha.html";
+                        window.location = "mp_sp.html";
                     }, 1000); // apenas para exibir o loading
 
                 });

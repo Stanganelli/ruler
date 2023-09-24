@@ -37,7 +37,7 @@ function voltaahome1() {
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location = "home1.html"
+    window.location.href = "home1.html"
 }
 
 
@@ -78,12 +78,12 @@ function voltaahome2() {
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location = "home2.html"
+    window.location.href = "home2.html"
 }
 
 function perdeu() {
     var url = "home.html"
-    window.location(url)
+    window.location.href = "home.html"
 }
 
 
@@ -125,7 +125,7 @@ localStorage.setItem("moraldes3", moral);
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location = "home3.html"
+    window.location.href = "home3.html"
 }
 
 
@@ -168,5 +168,5 @@ localStorage.setItem("moraldes4", moral);
     localStorage.setItem("forcabal", forcabal)
 
 
-    window.location = "home4.html"
+    window.location.href = "home4.html"
 }
