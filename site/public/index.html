@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fim.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <!-- <link rel="stylesheet" href="css/fim.css"> -->
     <link rel="stylesheet" href="css/index.css">
     <script src="js/rulerimage.js"></script>
 
@@ -16,9 +16,10 @@
       
 </head>
   <body>
+    <div id="transparente">
     <header>
       <nav class="logob">
-        <img src="media/logob.png" id="logoa">
+        <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
         <span class="nav-lista">
           <ul>
             <li class="hoover"><a href="index.html">home</a></li>
@@ -34,53 +35,49 @@
       <h1>PROJECT RULER</h1>
       <p>Meu projeto é dedicado a explorar as grandes conquistas de alguns grandes líderes da história. Nosso objetivo é inspirar e educar outras pessoas sobre o que grandes homens do passado fizeram para moldar nossas vidas hoje.</p>
 
-      <section class="featured-leaders">
+      <div id="featured-leaders">
         <h2>Líderes inclusos</h2>
-        <ul>
-          <li><img src="media/napoleao.jpg" alt="Leader 1"width="500" 
-            height="250"><span>Napoleão</span></li>
-          <li><img src="media/alexander.jpg" alt="Leader 2" width="500" 
-            height="250"><span>Alexandre</span></li>
-          <li><img src="media/qin.jpg" alt="Leader 3"width="500" 
-            height="250"><span>Quin</span></li>
-          <li><img src="media/mehemed.jpg" alt="Leader 3"width="500" 
-            height="250"><span>Mehemed II</span></li>
-          <li><img src="media/augusuts.jpg" alt="Leader 3"width="500" 
-            height="250"><span>Augusto</span></li>
-        </ul>
-      </section>
+        <div class="cardNapoleao">
+         <a href="https://www.napoleon.org/en/"><img src="media/napoleao.jpg" alt="Leader 1"width="500" 
+            height="250"></a>
+          </div>         
+            
+          <div class="cardAlexandre">
+            <a href="https://www.britannica.com/biography/Alexander-the-Great"><img src="media/alexander.jpg" alt="Leader 2" width="500" height="250"></a></div>
 
-      <section class="latest-news">
-        <h2>Ultimas descobertas historicas</h2>
-        <ul>
-          <li><a href="https://www.napoleon.org/en/">Napoleão</a></li>
-          <li><a href="https://www.britannica.com/biography/Alexander-the-Great">Alexandre</a></li>
-          <li><a href="https://www.britannica.com/topic/Qin-dynasty">Qin</a></li>
-          <li><a href="https://www.theottomans.org/english/campaigns_army/Mehmed-the-Conqueror.asp">Mehemed II</a></li>
-          <li><a href="https://www.britannica.com/biography/Augustus-Roman-emperor">Augustus</a></li>
-        </ul>
-      </section>
+            <div class="cardQin">
+         <a href="https://www.britannica.com/topic/Qin-dynasty"><img src="media/qin.jpg" alt="Leader 3"width="500" 
+            height="250"></a></div>         
+          
+            <div class="cardMehemed">
+            <a href="https://www.theottomans.org/english/campaigns_army/Mehmed-the-Conqueror.asp"><img src="media/mehemed.jpg" alt="Leader 3"width="500" height="250"></a></div>
 
-      <section class="join-us">
-        <h2>Junte-se</h2>
-        <p>Faça parte dessa comunidade e aprenda mais sobre a história e seus grandes homens. junte-se a nós para receber as últimas notícias e novidades sobre a história inserindo seu email abaixo.</p>
+            <div class="cardAugusto">
+         <a href="https://www.britannica.com/biography/Augustus-Roman-emperor"><img src="media/augusuts.jpg" alt="Leader 3"width="500" height="250"></a></div>
+        
+      </div>
+
+      <div class="join-us">
+        <h2>Junte-se a nós</h2>
+        <p>Faça parte dessa comunidade e aprenda mais sobre a história desses grandes homens. junte-se a nós para receber as últimas notícias e novidades sobre a história inserindo seu email abaixo.</p>
         <form action="#" method="post">
          
           <input type="email" id="email"><br/>
           <input type="submit" value="enviar">
         </form>
-      </section>
+      </div>
 
     </main>
 
     <footer>
-      ©Project ruler
+      Enzo Victor Stanganelli Gama © Project Ruler - 2023
     </footer>
 
     <!-- Eu gostaria de dar uma quantidade de aproximadamente 2 arrobas de agradecimento ao meu grande negão Rafael Henrrique Gonçalves Cebrian, Gisele, BrudBrud, Nathan e Yan
 por ter me apoiado no projeto --> 
 <audio src="media/theme.mp3" autoplay loop></audio>
 
+</div>
   </body>
 </html>
 
