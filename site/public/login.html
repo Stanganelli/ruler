@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
     <link rel="stylesheet" href="css/fim.css">
     <script src="js/rulerimage.js"></script>
     <link rel="stylesheet" href="css/login.css">
@@ -17,18 +17,24 @@
 
 <body>
 
-    <nav class="logob">
-        <img src="media/logob.png " id="logoa">
-        <span class="nav-lista">
-            <ul>
-                <li class="hoover"><a href="index.html">home</a></li>
-                <li class="hoover"><a href="login.html">login</a></li>
-                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-                <li class="hoover"><a href="chart.html">gráficos</a></li>
+    <div id="transparente">
+        <header>
+          <nav class="logob">
+            <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+            <span class="nav-lista">
+              <ul>
+                <li class="hoover"><a href="index.html">Home</a></li>
+                <li>|</li>
+                <li class="hoover"><a href="login.html">Login</a></li>
+                <li>|</li>
+                <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+                <li>|</li>
+                <li class="hoover"><a href="chart.html">Gráficos</a></li>
+              </ul>
+            </span>
+          </nav>
+        </header>
 
-            </ul>
-        </span>
-    </nav>
     <div class="login">
         <div class="alerta_erro">
             <div class="card_erro" id="cardErro">
@@ -45,7 +51,7 @@
                     </div>
                     <div class="campo">
                         <span>Senha:</span>
-                        <input id="senha_input" type="text" placeholder="******">
+                        <input id="senha_input" type="password" placeholder="******">
                     </div>
                     <button class="botao" onclick="verificar()">Entrar</button>
                 </div>
