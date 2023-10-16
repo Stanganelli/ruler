@@ -17,13 +17,13 @@
     right: calc(50px);
 }
 
-.middle-div {
+#canvas{
     position: absolute;
     width: 50%; 
     height: 50%; 
     top: 25%; 
     left: 25%; 
-    background-color: #f0f0f0; /
+    background-color: #f0f0f0; 
 }
 
 .selector-buttons {

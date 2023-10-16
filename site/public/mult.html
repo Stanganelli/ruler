@@ -36,8 +36,7 @@
             <option value="5">Augusto</option>
         </select>
         <button onclick="comprarInfant1()">comprar Infantaria </button><br>
-        <button onclick="comprarCav1()">comprar cavalaria</button><br>
-        <button onclick="comprarEsp1()">comprar <span id="spanart"></span></button><br>
+        <button onclick="comprarCav1()">comprar Arqueiros</button><br>
     </div>
 
 
@@ -54,20 +53,20 @@
             <option value="5">Augusto</option>
         </select>
         <button onclick="comprarInfant2()">comprar Infantaria </button><br>
-        <button onclick="comprarCav2()">comprar cavalaria</button><br>
-        <button onclick="comprarEsp2()">comprar <span id="spanart"></span></button><br>
+        <button onclick="comprarCav2()">comprar Arqueiros</button><br>
     </div>
 </body>
-<!-- Div no meio -->
-<div class="middle-div">
-    <!-- Conteúdo da div no meio -->
-
-    <div class="combat-button">
-        <button>Combate</button>
-    </div>
+    <canvas id="canvas"></canvas>
+   
     
-</div>
+<div class="combat-button">
+    <button>Combate</button>
+    <div class="combat-button">
+        <button onclick="reduceLifeLeft()">Reduzir Vida Esquerda</button>
+        <button onclick="reduceLifeRight()">Reduzir Vida Direita</button>
+    </div>
 
+        </div>
 </div>
 
     
@@ -75,7 +74,56 @@
 </html>
 
 <script>
+    const canvas = document.getElementById('canvas');
+    const ctx = canvas.getContext('2d');
 
+    let topLeftLife = 100; 
+    let topRightLife = 100;
 
+    const canvasWidth = window.innerWidth;
+    const canvasHeight = window.innerHeight;
+    canvas.width = canvasWidth;
+    canvas.height = canvasHeight;
 
+    const topLeftLifeBarWidth = 100;
+    const topLeftLifeBarHeight = 20;
+    const topLeftLifeBarX = 10;
+    const topLeftLifeBarY = 10;
+
+    const topRightLifeBarWidth = 100;
+    const topRightLifeBarHeight = 20;
+    const topRightLifeBarX = canvasWidth - topRightLifeBarWidth - 10;
+    const topRightLifeBarY = 10;
+
+    function drawLifeBars() {
+        drawLifeBar(topLeftLifeBarX, topLeftLifeBarY, topLeftLifeBarWidth, topLeftLifeBarHeight, topLeftLife);
+        drawLifeBar(topRightLifeBarX, topRightLifeBarY, topRightLifeBarWidth, topRightLifeBarHeight, topRightLife);
+    }
+
+    function drawLifeBar(x, y, width, height, life) {
+        ctx.clearRect(x, y - height - 5, width, height + 10);
+
+        ctx.fillStyle = 'gray';
+        ctx.fillRect(x, y, width, height);
+
+        ctx.fillStyle = 'green';
+        const lifeWidth = (life / 100) * width;
+        ctx.fillRect(x, y, lifeWidth, height);
+    }
+
+    function reduceLifeLeft() {
+        if (topLeftLife >= 10) {
+            topLeftLife -= 10;
+            drawLifeBars();
+        }
+    }
+
+    function reduceLifeRight() {
+        if (topRightLife >= 10) {
+            topRightLife -= 10;
+            drawLifeBars();
+        }
+    }
+
+    drawLifeBars();
 </script>
