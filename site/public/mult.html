@@ -8,25 +8,26 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="logob">
-        <img src="media/logob.png " id="logoa">
-        <span class="nav-lista">
+    <header>
+        <nav class="logob">
+          <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+          <span class="nav-lista">
             <ul>
-                <li class="hoover"><a href="index.html">home</a></li>
-                <li class="hoover"><a href="login.html">login</a></li>
-                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-                <li class="hoover"><a href="chart.html">gráficos</a></li>
-
+              <li class="hoover"><a href="index.html">Home</a></li>
+              <li>|</li>
+              <li class="hoover"><a href="login.html">Login</a></li>
+              <li>|</li>
+              <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+              <li>|</li>
+              <li class="hoover"><a href="chart.html">Gráficos</a></li>
             </ul>
-        </span>
-    </nav>
-
-
+          </span>
+        </nav>
+      </header>
     <div class="oval-img top-left">
         <img src="media/augusuts.jpg" alt="">
     </div>
     <div class="oval-opc top-left">
-        <!-- aprendi a utilizar um place holder em selects no seguinte site https://www.tutorialrepublic.com/faq/how-to-make-a-placeholder-for-a-select-box-in-html.php -->
         <select required id="liderPlayer1">
             <option value="" disabled selected hidden>Escolha Player 1</option>
             <option value="1">Napoleão</option>
@@ -35,10 +36,9 @@
             <option value="4">Mehmed II</option>
             <option value="5">Augusto</option>
         </select>
-        <button onclick="comprarInfant1()">comprar Infantaria </button><br>
-        <button onclick="comprarCav1()">comprar Arqueiros</button><br>
+        <button onclick="comprarInfantaria1()">comprar Infantaria </button><br>
+        <button onclick="comprarArqueiros1()">comprar Arqueiros</button><br>
     </div>
-
 
     <div class="oval-img top-right">
         <img src="media/augusuts.jpg" alt="">
@@ -52,78 +52,200 @@
             <option value="4">Mehmed II</option>
             <option value="5">Augusto</option>
         </select>
-        <button onclick="comprarInfant2()">comprar Infantaria </button><br>
-        <button onclick="comprarCav2()">comprar Arqueiros</button><br>
+        <button onclick="comprarInfantaria2()">comprar Infantaria </button><br>
+        <button onclick="comprarArqueiros2()">comprar Arqueiros</button><br>
     </div>
-</body>
+
     <canvas id="canvas"></canvas>
-   
-    
-<div class="combat-button">
-    <button>Combate</button>
+
     <div class="combat-button">
-        <button onclick="reduceLifeLeft()">Reduzir Vida Esquerda</button>
-        <button onclick="reduceLifeRight()">Reduzir Vida Direita</button>
+        <button onclick="combate()">Combate</button>
+        <div id="units-count"></div>
     </div>
 
-        </div>
-</div>
+    <script>
+        const canvas = document.getElementById('canvas')
+        const ctx = canvas.getContext('2d')
+        const canvasWidth = window.innerWidth
+        const canvasHeight = window.innerHeight
+        canvas.width = canvasWidth
+        canvas.height = canvasHeight
+        const topLeftLifeBarWidth = 100
+        const topLeftLifeBarHeight = 20
+        const topLeftLifeBarX = 10
+        const topLeftLifeBarY = 10
+        const topRightLifeBarWidth = 100
+        const topRightLifeBarHeight = 20
+        const topRightLifeBarX = canvasWidth - topRightLifeBarWidth - 10
+        const topRightLifeBarY = 10
 
+        var arqueirosP1 = []
+        var arqueirosP2 = []
+        var infantariaP1 = []
+        var infantariaP2 = []
+
+        var vidaP1 = 100
+        var vidaP2 = 100
+
+        function combate() {
+    // pega o valor de arqueiros e infantaria de cada P
+    var arqueiQtdP1 = arqueirosP1.length
+    var infantariaQtdP1 = infantariaP1.length
+
+    var arqueiQtdP2 = arqueirosP2.length
+    var infantariaQtdP2 = infantariaP2.length
+
+
+    var danoTotalP1 = (arqueiQtdP1 * 5) + (infantariaQtdP1 * 5)
+    var danoTotalP2 = (arqueiQtdP2 * 5) + (infantariaQtdP2 * 5)
+
+// dano a mais pra puro arqueiro
+    if (arqueiQtdP1 > 0 && infantariaQtdP1 === 0) {
+        danoTotalP1 += 10  
+    }
+
+    if (arqueiQtdP2 > 0 && infantariaQtdP2 === 0) {
+        danoTotalP2 += 10 
+    }
+// dano a mais pra puro infantaria
+    if (infantariaQtdP1 > 0 && arqueiQtdP1 === 0) {
+        danoTotalP1 += 10  
+    }
+
+    if (infantariaQtdP2 > 0 && arqueiQtdP2 === 0) {
+        danoTotalP2 += 10  
+    }
+// dano a menos pra exercito mistos
+    if (arqueiQtdP1 > 0 && infantariaQtdP1 > 0) {
+        danoTotalP1 -= 10  
+    }
+
+    if (arqueiQtdP2 > 0 && infantariaQtdP2 > 0) {
+        danoTotalP2 -= 10  
+    }
+
+
+
+    // tira vida de acordo com o combate
+    vidaP1 -= danoTotalP2
+    vidaP2 -= danoTotalP1
+
+
+
+    //limpa o canva e os arrays para o proximo combate
+    ctx.clearRect(0, 0, canvas.width, canvas.height)
+    arqueirosP1 = []
+    arqueirosP2 = []
+    infantariaP1 = []
+    infantariaP2 = []
+    attQtdUni()
     
+    // atualiz a vida dps do combate
+    desenhaBarraVida()
+
+    //veja quem saiu com mais vida e dê 10 de dano ao ruler rival
+    if (vidaP1 > vidaP2) {
+        calcDanoARuler(2, 10)
+    }
+    if (vidaP2 > vidaP1) {
+        calcDanoARuler(1, 10)
+    }
+}
+        
+function calcDanoARuler(P, dano) {
+    if (P === 1) {
+        vidaP1 -= dano
+    } else if (P === 2) {
+        vidaP2 -= dano
+    }
+
+    // atualiz a vida dps do combate
+    desenhaBarraVida()
+}
+
+
+        
+        function attQtdUni() {
+    var unitsCountElement = document.getElementById('units-count')
+    var totalP1 = infantariaP1.length + arqueirosP1.length
+ 
+    var totalP2 = infantariaP2.length + arqueirosP2.length
+
+
+    unitsCountElement.innerHTML = `${totalP1} VS  ${totalP2}`
+}
+
+
+
+
+
+        function desenhaBarraVida() {
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            drawLifeBar(topLeftLifeBarX, topLeftLifeBarY, topLeftLifeBarWidth, topLeftLifeBarHeight, vidaP1)
+            drawLifeBar(topRightLifeBarX, topRightLifeBarY, topRightLifeBarWidth, topRightLifeBarHeight, vidaP2)
+            // desenha para player 2
+         
+            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+
+            // desenha para player 2
+            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+        }
+
+        function comprarInfantaria1() {
+            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'blue' }
+            infantariaP1.push(unit)
+            desUnis()
+            attQtdUni()
+        }
+
+        function comprarArqueiros1() {
+            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkblue' }
+            arqueirosP1.push(unit)
+            desUnis()
+            attQtdUni()
+        }
+
+        function comprarInfantaria2() {
+            //ainda vou ter uma função de dinheiro não pensei direito ainda
+            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'red' }
+            infantariaP2.push(unit)
+            desUnis()
+            attQtdUni()
+        }
+
+        function comprarArqueiros2() {
+            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkred' }
+            arqueirosP2.push(unit)
+            desUnis()
+            attQtdUni()
+        }
+
+        function desUnis() {
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            desenhaBarraVida()
+            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+        }
+
+        function desUni(x, y, width, height, color) {
+            ctx.fillStyle = color
+            ctx.fillRect(x, y, width, height)
+        }
+
+        function drawLifeBar(x, y, width, height, life) {
+            ctx.fillStyle = 'gray'
+            ctx.fillRect(x, y, width, height)
+
+            ctx.fillStyle = 'green'
+            var lifeWidth = (life / 100) * width
+            ctx.fillRect(x, y, lifeWidth, height)
+        }
+
+        desenhaBarraVida()
+    </script>
 </body>
 </html>
-
-<script>
-    const canvas = document.getElementById('canvas');
-    const ctx = canvas.getContext('2d');
-
-    let topLeftLife = 100; 
-    let topRightLife = 100;
-
-    const canvasWidth = window.innerWidth;
-    const canvasHeight = window.innerHeight;
-    canvas.width = canvasWidth;
-    canvas.height = canvasHeight;
-
-    const topLeftLifeBarWidth = 100;
-    const topLeftLifeBarHeight = 20;
-    const topLeftLifeBarX = 10;
-    const topLeftLifeBarY = 10;
-
-    const topRightLifeBarWidth = 100;
-    const topRightLifeBarHeight = 20;
-    const topRightLifeBarX = canvasWidth - topRightLifeBarWidth - 10;
-    const topRightLifeBarY = 10;
-
-    function drawLifeBars() {
-        drawLifeBar(topLeftLifeBarX, topLeftLifeBarY, topLeftLifeBarWidth, topLeftLifeBarHeight, topLeftLife);
-        drawLifeBar(topRightLifeBarX, topRightLifeBarY, topRightLifeBarWidth, topRightLifeBarHeight, topRightLife);
-    }
-
-    function drawLifeBar(x, y, width, height, life) {
-        ctx.clearRect(x, y - height - 5, width, height + 10);
-
-        ctx.fillStyle = 'gray';
-        ctx.fillRect(x, y, width, height);
-
-        ctx.fillStyle = 'green';
-        const lifeWidth = (life / 100) * width;
-        ctx.fillRect(x, y, lifeWidth, height);
-    }
-
-    function reduceLifeLeft() {
-        if (topLeftLife >= 10) {
-            topLeftLife -= 10;
-            drawLifeBars();
-        }
-    }
-
-    function reduceLifeRight() {
-        if (topRightLife >= 10) {
-            topRightLife -= 10;
-            drawLifeBars();
-        }
-    }
-
-    drawLifeBars();
-</script>
