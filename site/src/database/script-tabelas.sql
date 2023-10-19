@@ -38,6 +38,10 @@ resul int,
 primary key (fkUsuario),
 foreign key (fkUsuario) references usuario (idUsuario));
 
+create table vitoria(
+p1 int,
+p2 int);
+
 select * from resul;
 
 

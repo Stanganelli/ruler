@@ -3,7 +3,7 @@ var multModel = require("../models/multModel");
 
 function ganhadorBd(req, res) {
     var ganhador = req.body.ganhadorServer;   
-    console.log("resultado", resultado)
+    console.log("resultado", ganhador)
 
 
 
