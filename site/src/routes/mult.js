@@ -10,5 +10,9 @@ router.post('/ganhadorBd', (req, res) => {
     multController.ganhadorBd(req, res);
 });
 
+router.get("/graficoMp", function (req, res) {
+    multController.graficoMp(req, res);
+});
+
 
 module.exports = router;

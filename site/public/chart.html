@@ -31,6 +31,9 @@
     <div class="graph" style="background-color: white;">
         <canvas id="myChartCanvas1"></canvas>
     </div>
+    <div class="graph" style="background-color: white;">
+        <canvas id="myChartCanvas2"></canvas>
+    </div>
 </body>
 
 </html>
@@ -84,9 +87,27 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
+    function dadosGrafico3(){
+        fetch(`/mult/graficoMp`, { cache: 'no-store' }).then(function (response) {
+            if (response.ok) {
+                response.json().then(function (resposta2) {
+                    console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
+                    
+
+                    plotarGrafico3(resposta2);
+                });
+            } else {
+                console.error('Nenhum dado encontrado ou erro na API');
+            }
+        })
+            .catch(function (error) {
+                console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
+            });
+    }
     function obterDadosGrafico() {
         dadosGrafico1()
         dadosGrafico2()
+        dadosGrafico3()
     }
 
     // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
@@ -196,15 +217,54 @@
             type: 'bar',
             data: dados,
         };
-
-        // Adicionando gráfico criado em div na tela
         let myChart = new Chart(
             document.getElementById(`myChartCanvas1`),
             config
         );
-
-        // setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
     }
+
+    function plotarGrafico3(resposta2) {
+    console.log('Iniciando plotagem do gráfico...');
+
+    let labels = [];
+    let dados = {
+        labels: labels,
+        datasets: [
+            {
+                label: 'quantidade de vitórias do jogador 1',
+                data: [], 
+                fill: false,
+                borderColor: 'blue',
+                tension: 0.1,
+            },
+            {
+                label: 'quantidade de vitórias do jogador 2',
+                data: [], 
+                fill: false,
+                borderColor: 'red', 
+                tension: 0.1,
+            },
+        ],
+    };
+
+    for (let i = 0; i < resposta2.length; i++) {
+        let registro = resposta2[i];
+        
+        labels.push("")
+        dados.datasets[0].data.push(parseInt(registro.somaP1));
+        dados.datasets[1].data.push(parseInt(registro.somaP2));
+    }
+
+    const config = {
+        type: 'bar',
+        data: dados,
+    };
+
+    let ctx = document.getElementById('myChartCanvas2').getContext('2d');
+    let myChart = new Chart(ctx, config);
+}
+
+
 
 
     

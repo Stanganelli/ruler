@@ -11,8 +11,17 @@ function ganhadorBd(ganhador) {
     return database.executar(instrucao);
 }
 
+function graficoMp() {
+    instrucao2 = `select * from somaVitoria; `;
+
+    console.log("Executando a instrução SQL: \n" + instrucao2);
+    return database.executar(instrucao2);
+}
+
+
 
 
 module.exports = {
-   ganhadorBd
-};
+   ganhadorBd,
+   graficoMp
+}

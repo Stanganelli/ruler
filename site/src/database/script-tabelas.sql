@@ -12,8 +12,9 @@ fkEmperador int,
 constraint fkEmperador foreign key (fkEmperador)
 references lider(idLider));
 
-select * from usuario;
-select * from lider;
+create table lider (
+idLider int primary key auto_increment,
+nome varchar(45));
 
 insert into lider(nome) value
 ('napoleao'),
@@ -21,16 +22,6 @@ insert into lider(nome) value
 ('quin'),
 ('mehemed2'),
 ('augusto');
-
-create table lider (
-idLider int primary key auto_increment,
-nome varchar(45));
-insert into usuario (nome,fkEmperador) value
-('sim', 1),
-('a', 2),
-('n', 1),
-('iga', 2);
-
 
 create table resul(
 fkUsuario int,
@@ -42,35 +33,6 @@ create table vitoria(
 p1 int,
 p2 int);
 
-select * from resul;
-
-
-
-
-
-
-
- INSERT INTO lider (nome, fkUsuario) VALUES ("otoman", undefined);
- 
- 
- INSERT INTO lider (nome, fkUsuario) VALUES ("greek", undefined);
- 
- 
- update  usuario set fkemperador = 1 where idUsuario = 2;
- 
- 
- 
-
-
-select sum(resul) from resul 
-	join usuario on idUsuario = fkUsuario
-		where fkEmperador = 1;
-        
-         
-select count(fkEmperador) from usuario where fkEmperador = 1;
-
-
-select count(fkEmperador)as jogadores from usuario where fkEmperador = 1 ;
 -- aqui a view é criada Este código SQL cria uma view chamada VW_RESULTADO que calcula a média truncada de "resul" para jogadores pela fkEmperador 
 --  juntamente com o nome do líder correspondente. para selecionar 
  create view VW_RESULTADO
@@ -79,3 +41,9 @@ select count(fkEmperador)as jogadores from usuario where fkEmperador = 1 ;
 		group by fkEmperador;
         
         select * from VW_RESULTADO;
+        
+        -- aqui crio a view que calcula quantas vezes o p1 ganhou e quantas vezes o p2 ganhou para exibir em uma tela de gráficos--
+        create view somaVitoria as
+select sum(p1) as somaP1, sum(p2) as somaP2
+from vitoria;
+select * from somaVitoria;

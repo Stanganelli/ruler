@@ -52,5 +52,4 @@ module.exports = {
     buscarUltimasMedidas,
     buscarMedidasEmTempoReal,
     buscarUltimasMedidasa,
-    //cazé gordão
 }
