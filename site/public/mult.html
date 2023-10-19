@@ -38,6 +38,7 @@
         </select>
         <button onclick="comprarInfantaria1()">comprar Infantaria </button><br>
         <button onclick="comprarArqueiros1()">comprar Arqueiros</button><br>
+        <span id="tropaDisp1">15</span>
     </div>
 
     <div class="oval-img top-right">
@@ -54,6 +55,7 @@
         </select>
         <button onclick="comprarInfantaria2()">comprar Infantaria </button><br>
         <button onclick="comprarArqueiros2()">comprar Arqueiros</button><br>
+        <span id="tropaDisp2">15</span>
     </div>
 
     <canvas id="canvas"></canvas>
@@ -64,6 +66,44 @@
     </div>
 
     <script>
+
+
+//essa funcionalidade abaixo tirei de https://www.w3schools.com/jsref/met_document_queryselector.asp 
+document.getElementById("liderPlayer1").addEventListener("change", function () {
+    var selectedValue = this.value;
+    var imageElement = document.querySelector(".oval-img.top-left img");
+
+    if (selectedValue === "1") {
+        imageElement.src = "media/napoleao.jpg";
+    } else if (selectedValue === "2") {
+        imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg";
+    } else if (selectedValue === "3") {
+        imageElement.src = "media/qin.jpg";
+    } else if (selectedValue === "4") {
+        imageElement.src = "media/mehemed.jpg";
+    } else if (selectedValue === "5") {
+        imageElement.src = "media/augusuts.jpg";
+    }
+})
+document.getElementById("liderPlayer2").addEventListener("change", function () {
+    var selectedValue = this.value;
+    var imageElement = document.querySelector(".oval-img.top-right img");
+    if (selectedValue === "1") {
+        imageElement.src = "media/napoleao.jpg"
+    } else if (selectedValue === "2") {
+        imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg"
+    } else if (selectedValue === "3") {
+        imageElement.src = "media/qin.jpg"
+    } else if (selectedValue === "4") {
+        imageElement.src = "media/mehemed.jpg"
+    } else if (selectedValue === "5") {
+        imageElement.src = "media/augusuts.jpg"
+    }
+   
+})
+//foto ir ficando vermelha a cada x % da barra de vida cair???
+
+
         const canvas = document.getElementById('canvas')
         const ctx = canvas.getContext('2d')
         const canvasWidth = window.innerWidth
@@ -91,8 +131,11 @@
         var p2Gan = 0
         var p1 = "p1"
         var p2 = "p2"
+        var tropaDisp1 = 15
+        var tropaDisp2 = 15
+        
         function combate() {
-    // pega o valor de arqueiros e infantaria de cada P
+    // pega o valor de arqueiros e infantaria de cada Player
     var arqueiQtdP1 = arqueirosP1.length
     var infantariaQtdP1 = infantariaP1.length
 
@@ -100,16 +143,16 @@
     var infantariaQtdP2 = infantariaP2.length
 
 
-    var danoTotalP1 = (arqueiQtdP1 * 5) + (infantariaQtdP1 * 5)
-    var danoTotalP2 = (arqueiQtdP2 * 5) + (infantariaQtdP2 * 5)
+    var danoTotalP1 = (arqueiQtdP1 * 3) + (infantariaQtdP1 * 2)
+    var danoTotalP2 = (arqueiQtdP2 * 3) + (infantariaQtdP2 * 2)
 
 // dano a mais pra puro arqueiro
     if (arqueiQtdP1 > 0 && infantariaQtdP1 === 0) {
-        danoTotalP1 += 10  
+        danoTotalP1 -= 5  
     }
 
     if (arqueiQtdP2 > 0 && infantariaQtdP2 === 0) {
-        danoTotalP2 += 10 
+        danoTotalP2 -= 5  
     }
 // dano a mais pra puro infantaria
     if (infantariaQtdP1 > 0 && arqueiQtdP1 === 0) {
@@ -142,6 +185,11 @@
     arqueirosP2 = []
     infantariaP1 = []
     infantariaP2 = []
+    tropaDisp1 = 15
+    tropaDisp2 = 15
+    document.getElementById("tropaDisp1").innerHTML = tropaDisp1
+    document.getElementById("tropaDisp2").innerHTML = tropaDisp2
+
     attQtdUni()
     
     // atualiz a vida dps do combate
@@ -156,7 +204,110 @@
     }
 }
         
-function calcDanoARuler(P, dano) {
+
+    function attQtdUni() {
+    var unitsCountElement = document.getElementById('qtdUni')
+    var totalP1 = infantariaP1.length + arqueirosP1.length
+ 
+    var totalP2 = infantariaP2.length + arqueirosP2.length
+
+
+    unitsCountElement.innerHTML = `${totalP1} VS  ${totalP2}`
+}
+
+
+
+
+
+        function desenhaBarraVida() {
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            drawLifeBar(topLeftLifeBarX, topLeftLifeBarY, topLeftLifeBarWidth, topLeftLifeBarHeight, vidaP1)
+            drawLifeBar(topRightLifeBarX, topRightLifeBarY, topRightLifeBarWidth, topRightLifeBarHeight, vidaP2)
+            // desenha para player 2
+         
+            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+
+            // desenha para player 2
+            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+        }
+
+        function comprarInfantaria1() {
+            if(tropaDisp1 > 0){
+            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'blue' }
+            infantariaP1.push(unit)
+            tropaDisp1 --
+            document.getElementById("tropaDisp1").innerHTML = tropaDisp1
+            desUnis()
+            attQtdUni()
+            }else {
+      alert("Você não pode comprar mais unidades o limite é 15 por jogador");
+    }
+        }
+
+        function comprarArqueiros1() {
+            if(tropaDisp1 > 0){
+            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkblue' }
+            arqueirosP1.push(unit)
+            tropaDisp1 --
+            document.getElementById("tropaDisp1").innerHTML = tropaDisp1
+            desUnis()
+            attQtdUni()
+            }else {
+      alert("Você não pode comprar mais unidades o limite é 15 por jogador");
+    }
+        }
+
+        function comprarInfantaria2() {
+            if(tropaDisp2 > 0){
+            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'red' }
+            infantariaP2.push(unit)
+            tropaDisp2 --
+            document.getElementById("tropaDisp2").innerHTML = tropaDisp2
+            desUnis()
+            attQtdUni()
+            }else {
+      alert("Você não pode comprar mais unidades o limite é 15 por jogador");
+    }
+        }
+
+        function comprarArqueiros2() {
+            if(tropaDisp2 > 0){
+            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkred' }
+            arqueirosP2.push(unit)
+            tropaDisp2 --
+            document.getElementById("tropaDisp2").innerHTML = tropaDisp2
+            desUnis()
+            attQtdUni()
+            }else {
+      alert("Você não pode comprar mais unidades o limite é 15 por jogador");
+    }
+        }
+
+        function desUnis() {
+            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
+            desenhaBarraVida()
+            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
+        }
+
+        function desUni(x, y, width, height, color) {
+            ctx.fillStyle = color
+            ctx.fillRect(x, y, width, height)
+        }
+
+        function drawLifeBar(x, y, width, height, life) {
+            ctx.fillStyle = 'gray'
+            ctx.fillRect(x, y, width, height)
+
+            ctx.fillStyle = 'green'
+            var lifeWidth = (life / 100) * width
+            ctx.fillRect(x, y, lifeWidth, height)
+        }
+        function calcDanoARuler(P, dano) {
     if (P === 1) {
         vidaP1 -= dano
     } else if (P === 2) {
@@ -165,10 +316,18 @@ function calcDanoARuler(P, dano) {
     
     if(vidaP1 <= 0){
         p2Gan = 1
+        ctx.font = '100px Arial';
+  ctx.fillStyle = 'red';
+  ctx.fillText('Parabéns Player 2', canvasWidth / 2 - 150, canvasHeight / 2);
+
         alert("jogar dois ganhou e sua vitoria guerra está salva em nossa base de dados")
     }
     if(vidaP2 <= 0){
         p1Gan = 1
+        ctx.font = '100px Arial';
+  ctx.fillStyle = 'blue';
+  ctx.fillText('Parabéns Player 1', canvasWidth / 2 - 150, canvasHeight / 2);
+
         alert("jogar um ganhou e sua vitoria guerra está salva em nossa base de dados")
     }
     if(p1Gan == 1){
@@ -241,90 +400,6 @@ function calcDanoARuler(P, dano) {
     desenhaBarraVida()
 
     }
-
-
-
-
-        
-        function attQtdUni() {
-    var unitsCountElement = document.getElementById('qtdUni')
-    var totalP1 = infantariaP1.length + arqueirosP1.length
- 
-    var totalP2 = infantariaP2.length + arqueirosP2.length
-
-
-    unitsCountElement.innerHTML = `${totalP1} VS  ${totalP2}`
-}
-
-
-
-
-
-        function desenhaBarraVida() {
-            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-            drawLifeBar(topLeftLifeBarX, topLeftLifeBarY, topLeftLifeBarWidth, topLeftLifeBarHeight, vidaP1)
-            drawLifeBar(topRightLifeBarX, topRightLifeBarY, topRightLifeBarWidth, topRightLifeBarHeight, vidaP2)
-            // desenha para player 2
-         
-            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-
-            // desenha para player 2
-            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-        }
-
-        function comprarInfantaria1() {
-            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'blue' }
-            infantariaP1.push(unit)
-            desUnis()
-            attQtdUni()
-        }
-
-        function comprarArqueiros1() {
-            var unit = { x: Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkblue' }
-            arqueirosP1.push(unit)
-            desUnis()
-            attQtdUni()
-        }
-
-        function comprarInfantaria2() {
-            //ainda vou ter uma função de dinheiro não pensei direito ainda
-            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 20, height: 40, color: 'red' }
-            infantariaP2.push(unit)
-            desUnis()
-            attQtdUni()
-        }
-
-        function comprarArqueiros2() {
-            var unit = { x: (canvasWidth / 2) + Math.random() * (canvasWidth / 2), y: Math.random() * canvasHeight, width: 10, height: 30, color: 'darkred' }
-            arqueirosP2.push(unit)
-            desUnis()
-            attQtdUni()
-        }
-
-        function desUnis() {
-            ctx.clearRect(0, 0, canvasWidth, canvasHeight)
-            desenhaBarraVida()
-            arqueirosP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-            infantariaP1.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-            arqueirosP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-            infantariaP2.forEach(unit => desUni(unit.x, unit.y, unit.width, unit.height, unit.color))
-        }
-
-        function desUni(x, y, width, height, color) {
-            ctx.fillStyle = color
-            ctx.fillRect(x, y, width, height)
-        }
-
-        function drawLifeBar(x, y, width, height, life) {
-            ctx.fillStyle = 'gray'
-            ctx.fillRect(x, y, width, height)
-
-            ctx.fillStyle = 'green'
-            var lifeWidth = (life / 100) * width
-            ctx.fillRect(x, y, lifeWidth, height)
-        }
 
         desenhaBarraVida()
     </script>
