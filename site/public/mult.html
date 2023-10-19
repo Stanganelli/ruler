@@ -60,7 +60,7 @@
 
     <div class="combat-button">
         <button onclick="combate()">Combate</button>
-        <div id="units-count"></div>
+        <div id="qtdUni"></div>
     </div>
 
     <script>
@@ -86,6 +86,9 @@
 
         var vidaP1 = 100
         var vidaP2 = 100
+
+        var p1Gan = 0
+        var p2Gan = 0
 
         function combate() {
     // pega o valor de arqueiros e infantaria de cada P
@@ -158,15 +161,27 @@ function calcDanoARuler(P, dano) {
     } else if (P === 2) {
         vidaP2 -= dano
     }
+    
+    if(vidaP1 <= 0){
+        p2Gan = 1
+        alert("jogar dois ganhou e sua vitoria guerra está salva em nossa base de dados")
+    }
+    if(vidaP2 <= 0){
+        p1Gan = 1
+        alert("jogar um ganhou e sua vitoria guerra está salva em nossa base de dados")
+
+    }
+
 
     // atualiz a vida dps do combate
     desenhaBarraVida()
+
 }
 
 
         
         function attQtdUni() {
-    var unitsCountElement = document.getElementById('units-count')
+    var unitsCountElement = document.getElementById('qtdUni')
     var totalP1 = infantariaP1.length + arqueirosP1.length
  
     var totalP2 = infantariaP2.length + arqueirosP2.length
