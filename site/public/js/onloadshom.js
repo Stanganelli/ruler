@@ -1,6 +1,6 @@
 
 
-
+function a(){ 
 
     var ruler = localStorage.getItem("emperador")
     var man = Number(localStorage.getItem("manp"))
@@ -78,3 +78,4 @@ var som = localStorage.getItem("som")
 
 img1.innerHTML = img
 som1.innerHTML = som
+}

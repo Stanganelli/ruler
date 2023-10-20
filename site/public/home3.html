@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fim.css">
+    <link rel="stylesheet" href="css/stylegame.css">
     <script src="js/rulerimage.js"></script>
     <script src="js/onloadshom.js"></script>
 
@@ -14,25 +13,31 @@
 </head>
 
 <body>
-    <nav class="logob">
-        <img src="media/logob.png " id="logoa">
-        <span class="nav-lista">
-            <ul>
-                <li class="hoover"><a href="index.html">home</a></li>
-                <li class="hoover"><a href="login.html">login</a></li>
-                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-                <li class="hoover"><a href="chart.html">gráficos</a></li>
-            </ul>
-        </span>
-    </nav><div class="conteiner">
+    <header>
+        <nav class="logob">
+            <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+            <span class="nav-lista">
+                <ul>
+                    <li class="hoover"><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="login.html">Login</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="chart.html">Gráficos</a></li>
+                </ul>
+            </span>
+        </nav>
+    </header>
+    <div class="conteiner">
         <span class="game">
             <div id="divexib"></div>
             <div class="txt">
-                
-    <button onclick="buyingm()">comprar Infantaria </button><br>
-    <button onclick="buyingc()">comprar cavalaria</button><br>
-    <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
-    <button onclick="seg()">seguir</button>
+
+                <button onclick="buyingm()">comprar Infantaria </button><br>
+                <button onclick="buyingc()">comprar cavalaria</button><br>
+                <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
+                <button onclick="seg()">seguir</button>
             </div>
         </span>
 
@@ -52,6 +57,7 @@
 
 </html>
 <script>
+    a()
 
     function buyingm() {
         if (csh >= 100) {
@@ -77,9 +83,6 @@
         if (csh >= 500) {
             art = art += 100
             csh = csh -= 500
-
-
-
             divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
         }
 
@@ -97,43 +100,43 @@
 
         if (forart > forman && forart > forcav) {
             var forcatotala = Number(forart + forman + forcav)
-            if (moral > 50) {
+            if (morale > 50) {
                 forcatotala = forcatotala / 2
             }
 
         }
         if (forman > forart && forman > forcav) {
             var forcatotalm = Number(forart + forman + forcav)
-            if (moral > 90) {
+            if (morale > 90) {
                 forcatotalm = forcatotalm / 1.5
             }
         }
         if (forcav > forart && forcav > forman) {
             var forcatotalc = forart + forman + forcav
-            if (moral > 75) {
+            if (morale > 75) {
                 forcatotalc = forcatotalc / 2
             }
         }
         if (forman == forart && forman == forcav && forart == forcav) {
             var forcatotalb = Number(forart + forman + forcav)
-            if (moral > 25) {
+            if (morale > 25) {
                 forcatotalb = forcatotalb / 2
             }
         }
 
 
-        
-localStorage.setItem("manphom3", man);
 
-localStorage.setItem("manphom3", man);
+        localStorage.setItem("manphom3", man);
 
-localStorage.setItem("artihom3", art);
+        localStorage.setItem("manphom3", man);
 
-localStorage.setItem("cavhom3", cavalary);
+        localStorage.setItem("artihom3", art);
 
-localStorage.setItem("cashhom3", csh);
+        localStorage.setItem("cavhom3", cavalary);
 
-localStorage.setItem("moralhom3", moral);
+        localStorage.setItem("cashhom3", csh);
+
+        localStorage.setItem("moralehom3", morale);
 
 
 
@@ -145,7 +148,7 @@ localStorage.setItem("moralhom3", moral);
 
         localStorage.setItem("cash", csh);
 
-        localStorage.setItem("moral", moral);
+        localStorage.setItem("morale", morale);
 
         localStorage.setItem("forcaart", forcaart)
 
@@ -160,7 +163,7 @@ localStorage.setItem("moralhom3", moral);
 
     }
     var img = localStorage.getItem("img")
-var som = localStorage.getItem("som")
+    var som = localStorage.getItem("som")
     img1.innerHTML = img
     som1.innerHTML = som
 
