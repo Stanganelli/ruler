@@ -7,52 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <title>Document</title>
-    <link rel="stylesheet" href="css/grafico.css">
-    <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/graf.css">
-    <link rel="stylesheet" href="css/style.css">
+
 </head>
-<nav class="logob">
-    <img src="media/logob.png " id="logoa">
-    <span class="nav-lista">
-        <ul>
-            <li class="hoover"><a href="index.html">home</a></li>
-            <li class="hoover"><a href="login.html">login</a></li>
-            <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-            <li class="hoover"><a href="chart.html">gráficos</a></li>
-        </ul>
-    </span>
-</nav>
 
 <body onload="obterDadosGrafico">
-    <div class="graph" style="background-color: white;">
+    <header>
+        <nav class="logob">
+            <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+            <span class="nav-lista">
+                <ul>
+                    <li class="hoover"><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="login.html">Login</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="chart.html">Gráficos</a></li>
+                </ul>
+            </span>
+        </nav>
+    </header>
+    <div class="graph" style="background-color: #333;">
         <canvas id="myChartCanvas"></canvas>
-    </div>
-    <div class="graph" style="background-color: white;">
         <canvas id="myChartCanvas1"></canvas>
     </div>
-    <div class="graph" style="background-color: white;">
+    <div class="graph2" style="background-color: #333;">
         <canvas id="myChartCanvas2"></canvas>
     </div>
 </body>
 
 </html>
 <script>
-    
-    // O gráfico é construído com três funções:
-    // 1. obterDadosGrafico -> Traz dados do Banco de Dados para montar o gráfico da primeira vez
-    // 2. plotarGrafico -> Monta o gráfico com os dados trazidos e exibe em tela
-    // 3. atualizarGrafico -> Atualiza o gráfico, trazendo novamente dados do Banco
 
-    // Esta função *obterDadosGrafico* busca os últimos dados inseridos em tabela de medidas.
-    // para, quando carregar o gráfico da primeira vez, já trazer com vários dados.
-    // A função *obterDadosGrafico* também invoca a função *plotarGrafico*
-
-    //     Se quiser alterar a busca, ajuste as regras de negócio em src/controllers
-    //     Para ajustar o "select", ajuste o comando sql em src/models
     window.onload = obterDadosGrafico();
-    
-    function dadosGrafico1(){
+
+    function dadosGrafico1() {
         fetch(`/medidas/ultimas/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta) {
@@ -69,13 +59,13 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
-    
-    function dadosGrafico2(){
+
+    function dadosGrafico2() {
         fetch(`/medidas/ultimasa/`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta1) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta1)}`);
-                    
+
 
                     plotarGrafico2(resposta1);
                 });
@@ -87,12 +77,12 @@
                 console.error(`Erro na obtenção dos dados p/ gráfico: ${error.message}`);
             });
     }
-    function dadosGrafico3(){
+    function dadosGrafico3() {
         fetch(`/mult/graficoMp`, { cache: 'no-store' }).then(function (response) {
             if (response.ok) {
                 response.json().then(function (resposta2) {
                     console.log(`Dados recebidos: ${JSON.stringify(resposta2)}`);
-                    
+
 
                     plotarGrafico3(resposta2);
                 });
@@ -114,116 +104,165 @@
     // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
     // A função *plotarGrafico* também invoca a função *atualizarGrafico*
     function plotarGrafico(resposta) {
+    console.log('iniciando plotagem do gráfico...');
 
-        console.log('iniciando plotagem do gráfico...');
+    let labels = [];
 
-        // Criando estrutura para plotar gráfico - labels
-        let labels = [];
+    let dados = {
+        labels: labels,
+        datasets: [{
+            label: '',
+            data: [],
+            fill: false,
+            borderColor: '#',
+            tension: 0.1,
+            backgroundColor: [
+                'rgb(255, 0, 0)',
+                'rgb(0, 84, 48)',
+                'rgb(181, 164, 59)',
+                'rgb(56, 9, 122)',
+                'rgb(59, 63, 181)'
+            ],
+            borderWidth: 4,
+            borderColor: [
+                'rgb(0, 0, 0)',
+            ]
+        }]
+    };
 
-        // Criando estrutura para plotar gráfico - dados
-        let dados = {
-            labels: labels,
-            datasets: [{
-                label: 'Quantidade que cada lider foi esoclhido',
-                data: [],
-                fill: false,
-                borderColor: '#fff',
-                tension: 0.1
-            }]
-        };
+    console.log('----------------------------------------------')
+    console.log('Estes dados foram recebidos pela função "obterDadosGrafico" e passados para "plotarGrafico":')
+    console.log(resposta)
 
-        console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-        console.log(resposta)
-
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta.length; i++) {
-            var registro = resposta[i];
-            labels.push(registro.nome);
-            dados.datasets[0].data.push(registro.qtd_pessoas);
-            // dados.datasets[1].data.push(registro.temperatura);
-        }
-
-        // console.log('----------------------------------------------')
-        // console.log('O gráfico será plotado com os respectivos valores:')
-        // console.log('Labels:')
-        // console.log(labels)
-        // console.log('Dados:')
-        // console.log(dados.datasets)
-        // console.log('----------------------------------------------')
-
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,
-        };
-
-        // Adicionando gráfico criado em div na tela
-        let myChart = new Chart(
-            document.getElementById(`myChartCanvas`),
-            config
-        );
-
-        // setTimeout(() => atualizarGrafico(idAquario, dados, myChart), 2000);
+    for (let i = 0; i < resposta.length; i++) {
+        let registro = resposta[i];
+        labels.push(registro.nome);
+        dados.datasets[0].data.push(registro.qtd_pessoas);
     }
-    // function obterDadosGrafico1() {
-        
 
-    // Esta função *plotarGrafico* usa os dados capturados na função anterior para criar o gráfico
-    // Configura o gráfico (cores, tipo, etc), materializa-o na página e, 
-    // A função *plotarGrafico* também invoca a função *atualizarGrafico*
+    const config = {
+        type: 'bar',
+        data: dados,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Quantidade de Líderes Escolhidos',
+                    color: 'white', 
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        color: 'white' 
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' 
+                    }
+                }
+            }
+        }
+    };
+
+    let myChart = new Chart(
+        document.getElementById('myChartCanvas'),
+        config
+    );
+}
+
     function plotarGrafico2(resposta1) {
+    console.log('iniciando plotagem do gráfico...');
 
-        console.log('iniciando plotagem do gráfico...');
+    let labels = [];
 
-        // Criando estrutura para plotar gráfico - labels
-        let labels = [];
+    let dados = {
+        labels: labels,
+        datasets: [{
+            label: '',
+            data: [],
+            fill: false,
+            borderColor: '#fff',
+            tension: 0.1,
+            backgroundColor: [
+                'rgba(59, 63, 181, 0.8)',
+                'rgba(56, 9, 122, 0.8)',
+                'rgba(181, 164, 59, 0.8)',
+                'rgba(0, 84, 48, 0.8)',
+                'rgba(255, 0, 0, 0.8)'
+            ],
+            borderWidth: 4,
+            borderColor: [
+                'rgb(0, 0, 0)',
+            ]
+        }]
+    };
 
-        // Criando estrutura para plotar gráfico - dados
-        let dados = {
-            labels: labels,
-            datasets: [{
-                label: 'MEDIA de pontuação final de cada lider',
-                data: [],
-                fill: false,
-                borderColor: '#fff',
-                tension: 0.1
-            }]
-        };
+    console.log('----------------------------------------------')
+    console.log('Estes dados foram recebidos pela função "obterDadosGrafico" e passados para "plotarGrafico":')
+    console.log(resposta1)
 
-        console.log('----------------------------------------------')
-        console.log('Estes dados foram recebidos pela funcao "obterDadosGrafico" e passados para "plotarGrafico":')
-        console.log(resposta1)
-
-        // Inserindo valores recebidos em estrutura para plotar o gráfico
-        for (i = 0; i < resposta1.length; i++) {
-            var registro = resposta1[i];
-
-            labels.push(registro.nome);
-            dados.datasets[0].data.push(registro.total);
-            // dados.datasets[1].data.push(registro.temperatura);
-        }
-
-        // console.log('----------------------------------------------')
-        // console.log('O gráfico será plotado com os respectivos valores:')
-        // console.log('Labels:')
-        // console.log(labels)
-        // console.log('Dados:')
-        // console.log(dados.datasets)
-        // console.log('----------------------------------------------')
-
-        // Criando estrutura para plotar gráfico - config
-        const config = {
-            type: 'bar',
-            data: dados,
-        };
-        let myChart = new Chart(
-            document.getElementById(`myChartCanvas1`),
-            config
-        );
+    for (let i = 0; i < resposta1.length; i++) {
+        let registro = resposta1[i];
+        labels.push(registro.nome);
+        dados.datasets[0].data.push(registro.total);
     }
 
-    function plotarGrafico3(resposta2) {
+    const config = {
+        type: 'bar',
+        data: dados,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Média de Pontuação Final dos Líderes',
+                    color: 'white', 
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        color: 'white' 
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white' 
+                    }
+                }
+            }
+        }
+    };
+
+    let myChart = new Chart(
+        document.getElementById('myChartCanvas1'),
+        config
+    );
+}
+
+
+function plotarGrafico3(resposta2) {
     console.log('Iniciando plotagem do gráfico...');
 
     let labels = [];
@@ -232,25 +271,34 @@
         datasets: [
             {
                 label: 'quantidade de vitórias do jogador 1',
-                data: [], 
+                data: [],
                 fill: false,
                 borderColor: 'blue',
                 tension: 0.1,
+                backgroundColor: "blue",
+                borderWidth: 4,
+                borderColor: [
+                    'rgb(0,0,0)',
+                ]
             },
             {
                 label: 'quantidade de vitórias do jogador 2',
-                data: [], 
+                data: [],
                 fill: false,
-                borderColor: 'red', 
+                borderColor: 'red',
                 tension: 0.1,
+                backgroundColor: "red",
+                borderWidth: 4,
+                borderColor: [
+                    'rgb(0,0,0)',
+                ]
             },
         ],
     };
 
     for (let i = 0; i < resposta2.length; i++) {
         let registro = resposta2[i];
-        
-        labels.push("")
+        labels.push(""); 
         dados.datasets[0].data.push(parseInt(registro.somaP1));
         dados.datasets[1].data.push(parseInt(registro.somaP2));
     }
@@ -258,6 +306,37 @@
     const config = {
         type: 'bar',
         data: dados,
+        options: {
+            plugins: {
+                title: {
+                    display: true,
+                    text: 'Resultado das Partidas',
+                    color: 'white', 
+                    font: {
+                        size: 16
+                    }
+                },
+                legend: {
+                    display: true,
+                    labels: {
+                        color: 'white' 
+                    }
+                }
+            },
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    ticks: {
+                        color: 'white'
+                    }
+                },
+                x: {
+                    ticks: {
+                        color: 'white'
+                    }
+                }
+            }
+        }
     };
 
     let ctx = document.getElementById('myChartCanvas2').getContext('2d');
@@ -267,6 +346,7 @@
 
 
 
-    
+
+
 
 </script>
