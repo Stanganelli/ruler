@@ -10,7 +10,7 @@
 <body>
     <header>
         <nav class="logob">
-          <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+          <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoc">
           <span class="nav-lista">
             <ul>
               <li class="hoover"><a href="index.html">Home</a></li>
@@ -25,7 +25,7 @@
         </nav>
       </header>
     <div class="oval-img top-left">
-        <img src="media/augusuts.jpg" alt="">
+        <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-left">
         <select required id="liderPlayer1">
@@ -42,7 +42,7 @@
     </div>
 
     <div class="oval-img top-right">
-        <img src="media/augusuts.jpg" alt="">
+        <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-right">
         <select required id="liderPlayer2">
@@ -148,19 +148,36 @@ document.getElementById("liderPlayer2").addEventListener("change", function () {
 
 // dano a mais pra puro arqueiro
     if (arqueiQtdP1 > 0 && infantariaQtdP1 === 0) {
-        danoTotalP1 -= 5  
+        danoTotalP1 += 5  
     }
 
     if (arqueiQtdP2 > 0 && infantariaQtdP2 === 0) {
-        danoTotalP2 -= 5  
+        danoTotalP2 += 5  
+    }
+    // dano tomado a mais pra puro arqueiro
+    if (arqueiQtdP1 > 0 && infantariaQtdP1 === 0) {
+        danoTotalP2 += 10 
+    }
+
+    if (arqueiQtdP2 > 0 && infantariaQtdP2 === 0) {
+        danoTotalP1 += 10
     }
 // dano a mais pra puro infantaria
     if (infantariaQtdP1 > 0 && arqueiQtdP1 === 0) {
-        danoTotalP1 += 10  
+        danoTotalP1 += 5
     }
 
     if (infantariaQtdP2 > 0 && arqueiQtdP2 === 0) {
-        danoTotalP2 += 10  
+        danoTotalP2 += 5
+    }
+    
+    // dano a menos tomado pra puro infantaria
+    if (infantariaQtdP1 > 0 && arqueiQtdP1 === 0) {
+        danoTotalP2 -= 5
+    }
+
+    if (infantariaQtdP2 > 0 && arqueiQtdP2 === 0) {
+        danoTotalP1 -= 5
     }
 // dano a menos pra exercito mistos
     if (arqueiQtdP1 > 0 && infantariaQtdP1 > 0) {

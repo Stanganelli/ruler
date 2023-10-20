@@ -6,41 +6,66 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/rulerimage.js"></script>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/fim.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/escolha.css">
+        <title>Document</title>
 </head>
 
 <body>
 
 
-    <nav class="logob">
-        <img src="media/logob.png " id="logoa">
+     <header>
+      <nav class="logob">
+        <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
         <span class="nav-lista">
-            <ul>
-                <li class="hoover"><a href="index.html">home</a></li>
-                <li class="hoover"><a href="login.html">login</a></li>
-                <li class="hoover"><a href="cadastro.html">cadastro</a></li>
-                <li class="hoover"><a href="chart.html">gráficos</a></li>
-            </ul>
+          <ul>
+            <li class="hoover"><a href="index.html">Home</a></li>
+            <li>|</li>
+            <li class="hoover"><a href="login.html">Login</a></li>
+            <li>|</li>
+            <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+            <li>|</li>
+            <li class="hoover"><a href="chart.html">Gráficos</a></li>
+          </ul>
         </span>
-    </nav>
+      </nav>
+    </header>
     <center>
+        <div class="oval-img top-right">
+            <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
+        </div>
+        <br>    
         <select name="Esolha" id="cq1">
+            <option value="" disabled selected hidden>Escolha seu campeão</option>
             <option value="1">Napoleão</option>
             <option value="2">Alexandre</option>
             <option value="3">Quin</option>
             <option value="4">Mehmed II</option>
             <option value="5">Augusto</option>
         </select>
-    </center>
+    
     <br>
     <button onclick="aescol(); aa()">escolher</button><br>
-    <!-- <a href="home.html">seguir</a> -->
+</center>
 </body>
 
 </html>
 <script>
+ document.getElementById("cq1").addEventListener("change", function () {
+            var selectedValue = this.value
+            var imageElement = document.querySelector(".oval-img img")
+
+            if (selectedValue === "1") {
+                imageElement.src = "media/napoleao.jpg"
+            } else if (selectedValue === "2") {
+                imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg";
+            } else if (selectedValue === "3") {
+                imageElement.src = "media/qin.jpg"
+            } else if (selectedValue === "4") {
+                imageElement.src = "media/mehemed.jpg"
+            } else if (selectedValue === "5") {
+                imageElement.src = "media/augusuts.jpg"
+            }
+        })
     //vejo que lider o usuario escolheu
     function aescol() {
         var lider = cq1.value;
