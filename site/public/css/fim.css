@@ -1,3 +1,5 @@
+
+
 .boximg{
     flex-basis: 20%;
     height: 85vh;
@@ -49,6 +51,8 @@ body {
   background-size: cover;
   height: 100%;
 }
+
+
 
 .logob{
   background: rgb(83,36,120);
@@ -137,7 +141,7 @@ body {
 }
 
 .boxx1 {
-    background-color: brown;
+    background-color: #333;
     width: 800px;
     height: 100%;
     border-radius: 20px 0 0 20px;
@@ -220,4 +224,139 @@ body {
     border-radius: 20px;
     font-size: 20px;
     font-weight: 700;
+}
+.feedback {
+  text-align: center;
+  max-width: 350px;
+  background-color: rgba(107, 15, 94, 0.8); /* Cor roxa escura transparente */
+  padding: 20px;
+  border-radius: 5px;
+  color: #fff; /* Cor do texto branco */
+}
+
+.feedback h2 {
+  color: #fff; /* Cor roxa escura */
+}
+
+.feedback form label {
+  display: block;
+  margin-top: 10px;
+}
+
+.feedback form input,
+.feedback form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #6b0f5e; /* Cor roxa escura */
+  border-radius: 3px;
+}
+
+.feedback form input[type="submit"] {
+  background-color: #6b0f5e; /* Cor roxa escura */
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.feedback form input[type="submit"]:hover {
+  background-color: #450b3d; /* Cor roxa mais escura no hover */
+}
+.feedback form label {
+  text-align: left; /* Alinhe o texto do label à esquerda */
+  display: block;
+  margin-top: 10px;
+  width: 100%; /* Certifique-se de que os labels ocupem a largura total */
+}
+.feedback form input,
+.feedback form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #6b0f5e; /* Cor roxa escura */
+  border-radius: 3px;
+  text-align: left; /* Alinhe o texto dentro das caixas à esquerda */
+  box-sizing: border-box; /* Garanta que o padding não afete a largura total */
+}
+
+
+.social-media {
+  text-align: center;
+  margin-top: 20px;
+  color: #fff; /* Cor do texto branco */
+}
+
+.social-media h2 {
+  color: #fff;
+}
+
+.social-media ul {
+  list-style: none;
+  padding: 0;
+}
+
+.social-media li {
+  margin: 10px 0;
+}
+
+.social-media a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 10px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+
+.social-media a:hover {
+  background-color: #450b3d; /* Cor roxa mais escura no hover */
+}
+.center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.sig {
+  display: block;
+  color: #fff;
+  background-color: #8345d9;
+  padding: 10px;
+  border-radius: 3px;
+  max-width: 300px;
+  margin: 10px auto;
+}
+
+.buttonSig {
+  background-color: #8345d9;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 3px;
+  transition: background-color 0.3s;
+}
+.buttonSig:hover {
+  background-color: #450b3d;
+}
+.boxx2 {
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+}
+
+.boximg {
+  text-align: center; /* Centraliza o conteúdo de boximg horizontalmente */
+}
+
+.oval-img img {
+  width: 150px; /* Removi os espaços em branco entre "150" e "px" */
+  height: 200px; /* Removi os espaços em branco entre "200" e "px" */
+  display: block; /* Remove espaçamento extra em volta da imagem */
+  margin: 0 auto; /* Centraliza horizontalmente a imagem */
 }
