@@ -28,7 +28,7 @@
         <img id="imga" width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-left">
-        <select required id="liderPlayer1">
+        <select class="select1" required id="liderPlayer1">
             <option value="" disabled selected hidden>Escolha Player 1</option>
             <option value="1">Napoleão</option>
             <option value="2">Alexandre</option>
@@ -38,14 +38,14 @@
         </select>
         <button onclick="comprarInfantaria1()">comprar Infantaria </button><br>
         <button onclick="comprarArqueiros1()">comprar Arqueiros</button><br>
-        <span id="tropaDisp1">15</span>
+        <span class="tropaDisp"  id="tropaDisp1">15</span>
     </div>
 
     <div class="oval-img top-right">
         <img id="imga" width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-right">
-        <select required id="liderPlayer2">
+        <select class="select1" required id="liderPlayer2">
             <option value="" disabled selected hidden>Escolha Player 2</option>
             <option value="1">Napoleão</option>
             <option value="2">Alexandre</option>
@@ -55,14 +55,14 @@
         </select>
         <button onclick="comprarInfantaria2()">comprar Infantaria </button><br>
         <button onclick="comprarArqueiros2()">comprar Arqueiros</button><br>
-        <span id="tropaDisp2">15</span>
+        <span class="tropaDisp" id="tropaDisp2">15</span>
     </div>
 
     <canvas id="canvas"></canvas>
 
     <div class="combat-button">
-        <button onclick="combate()">Combate</button>
-        <div id="qtdUni"></div>
+        <button class="combatButt" onclick="combate()">Combate</button>
+        <div class="qtdUni" id="qtdUni"></div>
     </div>
 
     <script>

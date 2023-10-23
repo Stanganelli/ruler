@@ -6,7 +6,16 @@
 #imga{
   filter: invert(1);
 }
-
+select {
+  text-align: center;
+  background-color: #333;
+  color: gold;
+  border: solid black 1px;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
 .top-left {
   top: calc(25%);
   left: calc(50px);
@@ -209,7 +218,11 @@ body {
 
 
 button:hover {
-  background-color: #3e8e41;
+  background-color: rgba(83, 36, 120, 1);
+  color: white;
+}
+button{
+  background-color: #cecb34;
 }
 
 button:focus {
@@ -245,7 +258,12 @@ h2 {
 .oval-opc select {
   margin-bottom: 10px;
 }
-
+.tropaDisp{
+  color: gold;
+}
+#qtdUni{
+  color: gold;
+}
 .button-group {
   display: flex;
   justify-content: center;
@@ -260,4 +278,14 @@ h2 {
   bottom: 20px;
   width: 100%;
   text-align: center;
+}
+
+.combatButt{
+  background-color:gold;
+  font-size: 30px;
+  padding: 10px 30px;
+}
+.combatButt:hover {
+  background-color: rgb(179, 19, 19);
+  color: white;
 }
