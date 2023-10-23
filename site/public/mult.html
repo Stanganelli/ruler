@@ -25,7 +25,7 @@
         </nav>
       </header>
     <div class="oval-img top-left">
-        <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
+        <img id="imga" width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-left">
         <select required id="liderPlayer1">
@@ -42,7 +42,7 @@
     </div>
 
     <div class="oval-img top-right">
-        <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
+        <img id="imga" width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
     </div>
     <div class="oval-opc top-right">
         <select required id="liderPlayer2">
@@ -75,14 +75,19 @@ document.getElementById("liderPlayer1").addEventListener("change", function () {
 
     if (selectedValue === "1") {
         imageElement.src = "media/napoleao.jpg";
+        imageElement.id = "1"
     } else if (selectedValue === "2") {
         imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg";
+        imageElement.id = "1"
     } else if (selectedValue === "3") {
         imageElement.src = "media/qin.jpg";
+        imageElement.id = "1"
     } else if (selectedValue === "4") {
         imageElement.src = "media/mehemed.jpg";
+        imageElement.id = "1"
     } else if (selectedValue === "5") {
         imageElement.src = "media/augusuts.jpg";
+        imageElement.id = "1"
     }
 })
 document.getElementById("liderPlayer2").addEventListener("change", function () {
@@ -90,14 +95,19 @@ document.getElementById("liderPlayer2").addEventListener("change", function () {
     var imageElement = document.querySelector(".oval-img.top-right img");
     if (selectedValue === "1") {
         imageElement.src = "media/napoleao.jpg"
+        imageElement.id = "1"
     } else if (selectedValue === "2") {
         imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg"
+        imageElement.id = "1"
     } else if (selectedValue === "3") {
         imageElement.src = "media/qin.jpg"
+        imageElement.id = "1"
     } else if (selectedValue === "4") {
         imageElement.src = "media/mehemed.jpg"
+        imageElement.id = "1"
     } else if (selectedValue === "5") {
         imageElement.src = "media/augusuts.jpg"
+        imageElement.id = "1"
     }
    
 })

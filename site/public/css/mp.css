@@ -3,6 +3,9 @@
   border-radius: 0%;
   color: #333;
 }
+#imga{
+  filter: invert(1);
+}
 
 .top-left {
   top: calc(25%);
