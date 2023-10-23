@@ -8,7 +8,7 @@
     <script src="main.js"></script>
     <script src="js/rulerimage.js"></script>
     <link rel="stylesheet" href="css/stylegame.css">
-    <title>Document</title>
+    <title>Ruler | Guarnição</title>
 </head>
 
 <body>
@@ -32,7 +32,6 @@
         <span class="game">
             <div id="divexib"></div>
             <div class="txt">
-
                 <button onclick="buyingm()">comprar Infantaria </button><br>
                 <button onclick="buyingc()">comprar cavalaria</button><br>
                 <button onclick="buyinga()">comprar <span id="spanart"></span></button><br>
@@ -48,8 +47,6 @@
                 <source src="" type="audio/mpeg">
             </audio>
         </div>
-        <br>
-        <div id="div1"></div>
     </div>
 
 </body>
@@ -96,7 +93,7 @@
                 moneytim = "dìngs"
 
             }
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}.<br> ${man} soldados de Infantaria.<br> ${cavalary} de cavalaria.<br>${art} linhas especializadas.`
         }
         else alert(`${moneytim} insuficente`)
     }
@@ -125,7 +122,7 @@
                 moneytim = "dìngs"
 
             }
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria,<br> ${cavalary} de cavalaria.<br>${art} linhas especializadas.`
         }
         else alert(`${moneytim} insuficente`)
     }
@@ -155,7 +152,7 @@
                 moneytim = "dìngs"
 
             }
-            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria  ,<br> ${cavalary}de cavalaria.<br>${art} linhas especializadas`
+            divexib.innerHTML = `No momento você tem:<br>${csh} ${moneytim}<br> ${man} soldados de Infantaria,<br> ${cavalary} de cavalaria.<br>${art} linhas especializadas.`
         }
 
         else alert(`${moneytim} insuficente`)

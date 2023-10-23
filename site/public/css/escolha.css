@@ -1,173 +1,213 @@
 /* Change the background color of the body */
 body {
-    background-color: #DBF1FD;
+  background-color: #333;
 }
 
 /* Change the color of the nav */
 nav {
-    background-color: #333;
+  background-color: #333;
 }
 
 /* Add a hover effect to the nav links */
 nav a:hover {
-    color: #ddd;
+  color: #ddd;
 }
 
 /* Style the canvas elements */
 canvas {
-    display: block;
-    margin: 0 auto;
-    max-width: 800px;
-    margin-bottom: 20px;
+  display: block;
+  margin: 0 auto;
+  max-width: 800px;
+  margin-bottom: 20px;
 }
 
 /* Add a heading above the charts */
 canvas::before {
-    content: attr(id);
-    display: block;
-    text-align: center;
-    font-size: 24px;
-    margin-bottom: 10px;
+  content: attr(id);
+  display: block;
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 10px;
 }
 
-.logob{
-    background: rgb(76,177,76);
-    background: linear-gradient(90deg, rgb(121, 161, 11) 0%, rgb(17, 187, 17) 100%);
-    display: flex;
-    /* margin-top: 0; */
-    justify-content: space-between;
-    align-items: center;  
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  .logob .nav-lista{
-    margin-right: 8%;
-  }
-  
-  .logob img{
-    margin-left: 10%;
-    filter: invert(1);
-  }
-  
-  .nav-lista li{
-    color: white;
-  }
-    /* header {
-      background-color: red;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    } */
-    
-    header img {
-      width: 90px;
-      height: 90px;
-    }
-    
-    header ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    
-    header li {
-      margin: 0 10px;
-    }
-    
-    header a {
-      color: white;
-      text-decoration: none;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0px;
-      background-image: url("");
-      background-size: cover;
-      background-repeat: no-repeat; 
-      background-attachment: fixed;
-      
-    }
-    
-  #transparente{
-    background-color: rgb(0, 0, 0, 0.533);
-    background-size: cover;
-    height: 100%;
-  }
-  
-  .logob{
-    background:#4CAF50;
-    background: linear-gradient(90deg, rgba(83,36,120,1) 0%, rgba(140,0,247,1) 50%, rgba(178,77,255,1) 100%);
-    display: flex;
-    /* margin-top: 0; */
-    justify-content: space-between;
-    align-items: center;  
-    text-decoration: none;
-    list-style: none;
-  }
-  
-  .logob .nav-lista{
-    margin-right: 8%;
-  }
-  
-  .logob img{
-    margin-left: 10%;
-    filter: invert(1);
-  }
-  
-  .nav-lista li{
-    color: white;
-  }
-    /* header {
-      background-color: red;
-      display: flex;
-      justify-content: space-around;
-      align-items: center;
-    } */
-    
-    header img {
-      width: 90px;
-      height: 90px;
-    }
-    
-    header ul {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      display: flex;
-    }
-    
-    header li {
-      margin: 0 10px;
-    }
-    
-    header a {
-      color: white;
-      text-decoration: none;
-    }
-    
-    main {
-      max-width: 800px;
-      margin: auto;
-      padding: 20px;
-      color: white;
-    }
-    
-    main h1 {
-      text-align: center;
-      
-    }
-    
-    main p {
-      text-align: justify;
-    }
+.logob {
+  background: rgb(76, 177, 76);
+  background: linear-gradient(90deg, rgb(121, 161, 11) 0%, rgb(17, 187, 17) 100%);
+  display: flex;
+  /* margin-top: 0; */
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
 
-    .graph {
+.logob .nav-lista {
+  margin-right: 8%;
+}
+
+.logob img {
+  margin-left: 10%;
+  filter: invert(1);
+}
+
+.nav-lista li {
+  color: white;
+}
+
+/* header {
+      background-color: red;
       display: flex;
-      width: 50vw;
-    }
-    .graph2{
-      width: 100vw;
-    }
-  
+      justify-content: space-around;
+      align-items: center;
+    } */
+
+header img {
+  width: 90px;
+  height: 90px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header li {
+  margin: 0 10px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0px;
+  background-image: url("");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+}
+
+#transparente {
+  background-color: rgb(0, 0, 0, 0.533);
+  background-size: cover;
+  height: 100%;
+}
+
+#imgchamp {
+  filter: invert(1);
+}
+
+.conteinerImg {
+  width: 100vw;
+  height: 70vh;
+}
+
+.oval-img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.conteinerImg select {
+  text-align: center;
+  background-color: rgba(83, 36, 120, 1);
+  color: red;
+  border: solid black 1px;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+.conteinerImg button:hover{
+  background-color: rgb(132, 42, 201);
+  cursor: pointer;
+}
+.conteinerImg button {
+  text-align: center;
+  background-color: rgba(83, 36, 120, 1);
+  color: red;
+  border: solid black 1px;
+  font-size: 20px;
+  padding: 5px;
+
+}
+
+.logob {
+  background: #4CAF50;
+  background: linear-gradient(90deg, rgba(83, 36, 120, 1) 0%, rgba(140, 0, 247, 1) 50%, rgba(178, 77, 255, 1) 100%);
+  display: flex;
+  /* margin-top: 0; */
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: none;
+  list-style: none;
+}
+
+.logob .nav-lista {
+  margin-right: 8%;
+}
+
+.logob img {
+  margin-left: 10%;
+  filter: invert(1);
+}
+
+.nav-lista li {
+  color: white;
+}
+
+header img {
+  width: 90px;
+  height: 90px;
+}
+
+header ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+header li {
+  margin: 0 10px;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+}
+
+main {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  color: white;
+}
+
+main h1 {
+  text-align: center;
+
+}
+
+main p {
+  text-align: justify;
+}
+
+.graph {
+  display: flex;
+  width: 50vw;
+}
+
+.graph2 {
+  width: 100vw;
+}

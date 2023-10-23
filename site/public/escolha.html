@@ -7,92 +7,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="js/rulerimage.js"></script>
     <link rel="stylesheet" href="css/escolha.css">
-        <title>Document</title>
+    <title>Ruler | Líder</title>
 </head>
 
 <body>
 
 
-     <header>
-      <nav class="logob">
-        <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
-        <span class="nav-lista">
-          <ul>
-            <li class="hoover"><a href="index.html">Home</a></li>
-            <li>|</li>
-            <li class="hoover"><a href="login.html">Login</a></li>
-            <li>|</li>
-            <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
-            <li>|</li>
-            <li class="hoover"><a href="chart.html">Gráficos</a></li>
-          </ul>
-        </span>
-      </nav>
+    <header>
+        <nav class="logob">
+            <img src="https://static.thenounproject.com/png/1428012-200.png" id="logoa">
+            <span class="nav-lista">
+                <ul>
+                    <li class="hoover"><a href="index.html">Home</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="login.html">Login</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="cadastro.html">Cadastro</a></li>
+                    <li>|</li>
+                    <li class="hoover"><a href="chart.html">Gráficos</a></li>
+                </ul>
+            </span>
+        </nav>
     </header>
-    <center>
-        <div class="oval-img top-right">
-            <img width=" 150 px" height="200 px" src="media/pngwing.com.png" alt="">
+    <div class="conteinerImg">
+        <div class="oval-img">
+            <img width=" 300 px" height="400 px" src="media/pngwing.com.png" alt="" id="imgchamp">
+            <select name="Esolha" id="cq1">
+                <option value="" disabled selected hidden>Escolha seu campeão</option>
+                <option value="1">Napoleão</option>
+                <option value="2">Alexandre</option>
+                <option value="3">Quin</option>
+                <option value="4">Mehmed II</option>
+                <option value="5">Augusto</option>
+            </select>
+            <button onclick="aescol(); aa()">Escolher</button>
         </div>
-        <br>    
-        <select name="Esolha" id="cq1">
-            <option value="" disabled selected hidden>Escolha seu campeão</option>
-            <option value="1">Napoleão</option>
-            <option value="2">Alexandre</option>
-            <option value="3">Quin</option>
-            <option value="4">Mehmed II</option>
-            <option value="5">Augusto</option>
-        </select>
-    
-    <br>
-    <button onclick="aescol(); aa()">escolher</button><br>
-</center>
+    </div>
 </body>
 
 </html>
 <script>
- document.getElementById("cq1").addEventListener("change", function () {
-            var selectedValue = this.value
-            var imageElement = document.querySelector(".oval-img img")
+    document.getElementById("cq1").addEventListener("change", function () {
+        var selectedValue = this.value
+        var imageElement = document.querySelector(".oval-img img")
 
-            if (selectedValue === "1") {
-                imageElement.src = "media/napoleao.jpg"
-            } else if (selectedValue === "2") {
-                imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg";
-            } else if (selectedValue === "3") {
-                imageElement.src = "media/qin.jpg"
-            } else if (selectedValue === "4") {
-                imageElement.src = "media/mehemed.jpg"
-            } else if (selectedValue === "5") {
-                imageElement.src = "media/augusuts.jpg"
-            }
-        })
+        if (selectedValue === "1") {
+            imageElement.src = "media/napoleao.jpg"
+            imageElement.id = "1"
+        } else if (selectedValue === "2") {
+            imageElement.src = "https://static.tvtropes.org/pmwiki/pub/images/alexander-the-great_114.jpg";
+            imageElement.id = "1"
+        } else if (selectedValue === "3") {
+            imageElement.src = "media/qin.jpg"
+            imageElement.id = "1"
+        } else if (selectedValue === "4") {
+            imageElement.src = "media/mehemed.jpg"
+            imageElement.id = "1"
+        } else if (selectedValue === "5") {
+            imageElement.src = "media/augusuts.jpg"
+            imageElement.id = "1"
+        }
+    })
     //vejo que lider o usuario escolheu
     function aescol() {
         var lider = cq1.value;
         var liderexib = ""
         if (lider == '1') {
             var lider1 = "franc"
-        var liderexib = "Napoleão"
+            var liderexib = "Napoleão"
 
         }
         if (lider == '2') {
             var lider1 = "greek"
-        var liderexib = "Alexandre"
+            var liderexib = "Alexandre"
 
         }
         if (lider == '3') {
             var lider1 = "perisan"
-        var liderexib = "Quin"
+            var liderexib = "Quin"
 
         }
         if (lider == '4') {
             var lider1 = "otoman"
-        var liderexib = "Mehemed II"
+            var liderexib = "Mehemed II"
 
         }
         if (lider == '5') {
             var lider1 = "roman"
-        var liderexib = "Augusto"
+            var liderexib = "Augusto"
 
         }
         localStorage.setItem("emperador", lider1);
@@ -102,7 +104,7 @@
         var idUsuario = sessionStorage.ID_USUARIO
 
         //mando pro bd pode ser melhor visto na usuarioModel.js
-        if (idUsuario != '' && idUsuario != undefined) {        
+        if (idUsuario != '' && idUsuario != undefined) {
             fetch(`/usuarios/enviarRuler/${idUsuario}`, {
                 method: "POST",
                 headers: {
@@ -140,9 +142,9 @@
     }
 
 
-function aa(){
-    window.location = "home.html"
+    function aa() {
+        window.location = "home.html"
 
-}
+    }
 
 </script>
